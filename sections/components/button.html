@@ -1,0 +1,86 @@
+<div class="max-w-4xl">
+  <h1 class="text-2xl font-bold text-neutral-900 mb-1">버튼 (Button)</h1>
+  <p class="text-neutral-600 mb-8">Primary / Secondary / Ghost / Grey / Grey Stroke + 크기 · 아이콘 · FAB</p>
+
+  <!-- Variants -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">Variants — MD (48px)</h2>
+    <div class="bg-neutral-0 border border-neutral-200 rounded-card p-6 flex flex-wrap gap-3 items-center">
+      <button class="np-btn np-btn-primary np-btn-md">Primary</button>
+      <button class="np-btn np-btn-secondary np-btn-md">Secondary</button>
+      <button class="np-btn np-btn-ghost np-btn-md">Ghost</button>
+      <button class="np-btn np-btn-grey np-btn-md">Grey</button>
+      <button class="np-btn np-btn-grey-stroke np-btn-md">Grey Stroke</button>
+    </div>
+  </section>
+
+  <!-- Sizes -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">Sizes</h2>
+    <div class="bg-neutral-0 border border-neutral-200 rounded-card p-6 flex flex-wrap gap-3 items-center">
+      <button class="np-btn np-btn-primary np-btn-sm">Small (40px)</button>
+      <button class="np-btn np-btn-primary np-btn-md">Medium (48px)</button>
+      <button class="np-btn np-btn-primary np-btn-lg">Large (56px)</button>
+    </div>
+  </section>
+
+  <!-- With Icon -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">With Icon</h2>
+    <div class="bg-neutral-0 border border-neutral-200 rounded-card p-6 flex flex-wrap gap-3 items-center">
+      <button class="np-btn np-btn-primary np-btn-md">
+        <svg class="w-icon-sm h-icon-sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg>
+        채용 검색
+      </button>
+      <button class="np-btn np-btn-secondary np-btn-md">
+        <svg class="w-icon-sm h-icon-sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+        이력서 등록
+      </button>
+      <button class="np-btn np-btn-grey np-btn-md">
+        지원하기
+        <svg class="w-icon-sm h-icon-sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- Icon Only -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">Icon Button</h2>
+    <div class="bg-neutral-0 border border-neutral-200 rounded-card p-6 flex flex-wrap gap-3 items-center">
+      <button class="np-btn-icon np-btn-icon-sm bg-neutral-100 hover:bg-neutral-200 text-neutral-800 transition-colors duration-[120ms]">
+        <svg class="w-icon-sm h-icon-sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 0 0 0 6.364L12 20.364l7.682-7.682a4.5 4.5 0 0 0-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 0 0-6.364 0z"/></svg>
+      </button>
+      <button class="np-btn-icon np-btn-icon-md bg-neutral-100 hover:bg-neutral-200 text-neutral-800 transition-colors duration-[120ms]">
+        <svg class="w-icon-md h-icon-md" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0 1 18 14.158V11a6.002 6.002 0 0 0-4-5.659V5a2 2 0 1 0-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 1 1-6 0v-1m6 0H9"/></svg>
+      </button>
+      <button class="np-btn-icon np-btn-icon-lg bg-primary-500 hover:bg-primary-400 text-neutral-0 transition-colors duration-[120ms]">
+        <svg class="w-icon-lg h-icon-lg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg>
+      </button>
+    </div>
+    <p class="text-xs text-neutral-400 mt-2 px-1">SM(40) / MD(48) / LG(56)</p>
+  </section>
+
+  <!-- FAB -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">FAB (Floating Action Button)</h2>
+    <div class="bg-neutral-100 border border-neutral-200 rounded-card p-6 flex gap-4 items-center relative min-h-[100px]">
+      <button class="np-fab">
+        <svg class="w-icon-md h-icon-md" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+      </button>
+      <button class="np-fab">
+        <svg class="w-icon-md h-icon-md" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- Disabled -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">Disabled</h2>
+    <div class="bg-neutral-0 border border-neutral-200 rounded-card p-6 flex flex-wrap gap-3 items-center">
+      <button class="np-btn np-btn-primary np-btn-md" disabled>Primary</button>
+      <button class="np-btn np-btn-secondary np-btn-md" disabled>Secondary</button>
+      <button class="np-btn np-btn-ghost np-btn-md" disabled>Ghost</button>
+      <button class="np-btn np-btn-grey np-btn-md" disabled>Grey</button>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    @apply font-base text-neutral-900 bg-neutral-50;
+  }
+}
+
+@layer components {
+
+  /* ── Button Base ── */
+  .np-btn {
+    @apply inline-flex items-center justify-center gap-2
+           font-base font-bold
+           rounded-button border-none cursor-pointer
+           transition-all duration-[120ms] ease-out
+           whitespace-nowrap relative select-none;
+  }
+  .np-btn:focus-visible {
+    @apply outline-none shadow-[0_0_0_3px_rgba(255,184,159,0.35)];
+  }
+  .np-btn:disabled {
+    @apply opacity-40 cursor-not-allowed pointer-events-none;
+  }
+
+  /* Sizes — 시니어 가독성: 최소 text-lg(18px) */
+  .np-btn-sm  { @apply h-10 px-4 text-lg;  }
+  .np-btn-md  { @apply h-12 px-5 text-xl;  }
+  .np-btn-lg  { @apply h-14 px-6 text-2xl; }
+
+  /* Variants */
+  .np-btn-primary {
+    @apply bg-primary-500 text-neutral-0
+           hover:bg-primary-400 active:bg-primary-300;
+  }
+  .np-btn-secondary {
+    @apply bg-neutral-0 text-primary-500
+           border border-primary-500
+           hover:bg-primary-50 active:bg-primary-100;
+  }
+  .np-btn-ghost {
+    @apply bg-transparent text-primary-500
+           hover:bg-primary-50 active:bg-primary-100;
+  }
+  .np-btn-grey {
+    @apply bg-neutral-100 text-neutral-800
+           hover:bg-neutral-200 active:bg-neutral-200;
+  }
+  .np-btn-grey-stroke {
+    @apply bg-neutral-0 text-neutral-800
+           border border-neutral-200
+           hover:bg-neutral-50 active:bg-neutral-100;
+  }
+
+  /* Icon Button */
+  .np-btn-icon {
+    @apply inline-flex items-center justify-center
+           rounded-button border-none cursor-pointer
+           transition-all duration-[120ms] ease-out;
+  }
+  .np-btn-icon-sm { @apply w-10 h-10; }
+  .np-btn-icon-md { @apply w-12 h-12; }
+  .np-btn-icon-lg { @apply w-14 h-14; }
+
+  /* FAB */
+  .np-fab {
+    @apply inline-flex items-center justify-center
+           w-14 h-14 rounded-pill
+           bg-primary-500 text-neutral-0
+           shadow-[0_4px_12px_rgba(255,127,101,0.35)]
+           hover:bg-primary-400 active:bg-primary-300
+           transition-all duration-[120ms] ease-out cursor-pointer border-none;
+  }
+
+  /* ── Text Field — 시니어 가독성: 레이블 text-lg, 입력값 text-xl ── */
+  .np-textfield-wrap { @apply flex flex-col gap-2; }
+  .np-textfield-label { @apply text-lg font-semibold text-neutral-800; }
+  .np-textfield {
+    @apply w-full h-14 px-4
+           font-base text-xl text-neutral-900
+           bg-neutral-0 border border-neutral-200 rounded-button
+           outline-none transition-all duration-[120ms] ease-out
+           placeholder:text-neutral-400;
+  }
+  .np-textfield:focus {
+    @apply border-primary-500 shadow-[0_0_0_3px_rgba(255,184,159,0.25)];
+  }
+  .np-textfield-error {
+    @apply border-error-500;
+  }
+  .np-textfield-error:focus {
+    @apply shadow-[0_0_0_3px_rgba(244,67,54,0.15)];
+  }
+  .np-textfield-hint { @apply text-base text-neutral-400 mt-1; }
+  .np-textfield-hint-error { @apply text-base text-error-500 mt-1; }
+  .np-textfield:disabled {
+    @apply bg-neutral-50 text-neutral-400 cursor-not-allowed;
+  }
+
+  /* ── Chip — 시니어 가독성: text-lg, 높이 h-10 ── */
+  .np-chip {
+    @apply inline-flex items-center gap-1
+           h-10 px-4
+           font-base text-lg font-medium
+           bg-neutral-100 text-neutral-800
+           rounded-pill border border-transparent
+           cursor-pointer transition-all duration-[120ms] ease-out select-none;
+  }
+  .np-chip:hover  { @apply bg-neutral-200; }
+  .np-chip-active {
+    @apply bg-primary-50 text-primary-500 border-primary-500;
+  }
+  .np-chip-active:hover { @apply bg-primary-100; }
+
+  /* ── Badge — 시니어 가독성: text-base, 충분한 패딩 ── */
+  .np-badge {
+    @apply inline-flex items-center justify-center
+           px-3 h-7
+           font-base text-base font-semibold
+           rounded-badge;
+  }
+  .np-badge-primary { @apply bg-primary-500 text-neutral-0; }
+  .np-badge-neutral { @apply bg-neutral-200 text-neutral-800; }
+  .np-badge-success { @apply bg-success-100 text-success-500; }
+  .np-badge-warning { @apply bg-warning-100 text-warning-500; }
+  .np-badge-error   { @apply bg-error-100 text-error-500; }
+  .np-badge-info    { @apply bg-info-100 text-info-500; }
+
+  /* ── Divider ── */
+  .np-divider {
+    @apply w-full border-none border-t border-neutral-200 my-0;
+  }
+  .np-divider-thick {
+    @apply w-full h-2 bg-neutral-100 border-none;
+  }
+
+}

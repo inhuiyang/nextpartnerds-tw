@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>넥스트파트너 Design System</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+  <link rel="stylesheet" href="dist/index.css" />
+</head>
+<body class="flex min-h-screen font-base">
+
+  <!-- Sidebar -->
+  <aside class="w-[220px] shrink-0 border-r border-neutral-200 bg-neutral-0 flex flex-col fixed top-0 left-0 h-full overflow-y-auto">
+    <div class="px-6 py-6 border-b border-neutral-200">
+      <div class="text-[13px] font-bold text-primary-500 tracking-widest uppercase mb-1">넥스트파트너</div>
+      <div class="text-[11px] text-neutral-400">Design System v1.0</div>
+    </div>
+
+    <nav class="flex-1 py-4">
+      <!-- Foundation -->
+      <div class="px-4 mb-1">
+        <div class="text-[10px] font-bold text-neutral-400 uppercase tracking-widest px-2 py-1">Foundation</div>
+      </div>
+      <a href="#" class="nav-item" data-section="foundation/color">색상 (Color)</a>
+      <a href="#" class="nav-item" data-section="foundation/typography">타이포그래피</a>
+
+      <!-- Components -->
+      <div class="px-4 mt-4 mb-1">
+        <div class="text-[10px] font-bold text-neutral-400 uppercase tracking-widest px-2 py-1">Components</div>
+      </div>
+      <a href="#" class="nav-item" data-section="components/button">버튼 (Button)</a>
+      <a href="#" class="nav-item" data-section="components/textfield">텍스트 필드</a>
+      <a href="#" class="nav-item" data-section="components/chip">칩 (Chip)</a>
+      <a href="#" class="nav-item" data-section="components/badge">배지 (Badge)</a>
+      <a href="#" class="nav-item" data-section="components/divider">구분선 (Divider)</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="ml-[220px] flex-1 p-8 min-h-screen bg-neutral-50" id="main-content">
+    <div id="section-container">
+      <!-- 기본 웰컴 화면 -->
+      <div class="max-w-2xl">
+        <h1 class="text-3xl font-bold text-neutral-900 mb-3">넥스트파트너 Design System</h1>
+        <p class="text-neutral-600 text-lg mb-8">시니어 구직 플랫폼 디자인 시스템 — Tailwind CSS v3 기반</p>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-neutral-0 border border-neutral-200 rounded-card p-5">
+            <div class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-2">Foundation</div>
+            <p class="text-neutral-600 text-sm">색상, 타이포그래피 등 기초 토큰</p>
+          </div>
+          <div class="bg-neutral-0 border border-neutral-200 rounded-card p-5">
+            <div class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-2">Components</div>
+            <p class="text-neutral-600 text-sm">버튼, 칩, 배지 등 UI 컴포넌트</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <style>
+    .nav-item {
+      display: block;
+      padding: 6px 16px;
+      margin: 1px 8px;
+      border-radius: 6px;
+      font-size: 13px;
+      color: #666666;
+      text-decoration: none;
+      transition: background 120ms, color 120ms;
+    }
+    .nav-item:hover { background: #f5f5f5; color: #1a1a1a; }
+    .nav-item.active { background: #fff4f1; color: #ff7f65; font-weight: 600; }
+  </style>
+
+  <script src="scripts/loader.js"></script>
+</body>
+</html>
