@@ -1,0 +1,230 @@
+<div class="max-w-2xl">
+  <h1 class="text-2xl font-bold text-neutral-900 mb-1">검색 (Search)</h1>
+  <p class="text-neutral-600 mb-8">Search Field · Search View</p>
+
+  <!-- ── Search Field ── -->
+  <h2 class="text-xl font-bold text-neutral-900 mb-1">Search Field</h2>
+  <p class="text-neutral-600 mb-6">검색 입력 필드 상태</p>
+
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">States</h2>
+    <div class="bg-neutral-0 border border-neutral-200 rounded-card p-6 flex flex-col gap-5">
+
+      <div>
+        <p class="text-base text-neutral-400 mb-2">Default</p>
+        <div class="np-search">
+          <svg class="np-search-icon w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg>
+          <input type="text" class="np-search-input" placeholder="직무, 회사명으로 검색" />
+        </div>
+      </div>
+
+      <div>
+        <p class="text-base text-neutral-400 mb-2">With Value</p>
+        <div class="np-search">
+          <svg class="np-search-icon w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg>
+          <input type="text" class="np-search-input" value="마케팅 팀장" id="sf-with-value" oninput="document.getElementById('sf-clear').style.display=this.value?'':'none'" />
+          <button id="sf-clear" class="np-search-clear" onclick="document.getElementById('sf-with-value').value=''; this.style.display='none'">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div>
+        <p class="text-base text-neutral-400 mb-2">Disabled</p>
+        <div class="np-search opacity-40 pointer-events-none">
+          <svg class="np-search-icon w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg>
+          <input type="text" class="np-search-input" placeholder="검색을 사용할 수 없습니다" disabled />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Search View ── -->
+  <div class="border-t border-neutral-200 my-10"></div>
+  <h2 class="text-xl font-bold text-neutral-900 mb-1">Search View</h2>
+  <p class="text-neutral-600 mb-6">직접 타이핑해서 검색 흐름을 확인하세요</p>
+
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">Interactive Demo</h2>
+    <div class="bg-neutral-50 border border-neutral-200 rounded-card p-6">
+
+      <!-- 검색 필드 + 드롭다운 (relative wrapper) -->
+      <div class="relative" id="search-view-root">
+
+        <!-- Search Field -->
+        <div class="np-search" id="search-field">
+          <svg class="np-search-icon w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg>
+          <input
+            type="text"
+            id="search-input"
+            class="np-search-input"
+            placeholder="직무, 회사명으로 검색"
+            autocomplete="off"
+          />
+          <button id="search-clear" class="np-search-clear" style="display:none">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+
+        <!-- Dropdown -->
+        <div id="search-dropdown" class="np-search-view absolute left-0 right-0 mt-2 z-10" style="display:none">
+
+          <!-- 최근 검색어 (입력 전) -->
+          <div id="view-recent">
+            <p class="np-search-section-label">최근 검색어</p>
+            <div class="np-search-item" onclick="selectKeyword('마케팅 팀장')">
+              <svg class="w-5 h-5 text-neutral-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span class="flex-1">마케팅 팀장</span>
+              <svg class="w-4 h-4 text-neutral-400" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+            </div>
+            <div class="np-search-item" onclick="selectKeyword('넥스트파트너')">
+              <svg class="w-5 h-5 text-neutral-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span class="flex-1">넥스트파트너</span>
+              <svg class="w-4 h-4 text-neutral-400" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+            </div>
+            <div class="np-search-item" onclick="selectKeyword('IT 개발 시니어')">
+              <svg class="w-5 h-5 text-neutral-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span class="flex-1">IT 개발 시니어</span>
+              <svg class="w-4 h-4 text-neutral-400" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+            </div>
+          </div>
+
+          <!-- 자동완성 결과 (입력 중) -->
+          <div id="view-suggest" style="display:none">
+            <p class="np-search-section-label">추천 검색어</p>
+            <div id="suggest-list"></div>
+            <div class="np-search-divider my-1"></div>
+            <p class="np-search-section-label">관련 회사</p>
+            <div id="company-list"></div>
+          </div>
+
+          <!-- 결과 없음 -->
+          <div id="view-empty" style="display:none" class="py-10 flex flex-col items-center gap-2">
+            <svg class="w-10 h-10 text-neutral-200" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg>
+            <p class="text-lg font-semibold text-neutral-800">검색 결과가 없습니다</p>
+            <p class="text-base text-neutral-400">다른 키워드로 다시 검색해보세요</p>
+          </div>
+
+        </div>
+      </div>
+
+      <p class="text-sm text-neutral-400 mt-4">"마케" · "IT" · "디자" 등을 입력해보세요</p>
+    </div>
+  </section>
+
+</div>
+
+<script>
+(function() {
+  var KEYWORDS = [
+    { label: '마케팅 팀장', company: '마케토피아' },
+    { label: '마케팅 기획', company: '마케팅랩' },
+    { label: '마케팅 콘텐츠', company: null },
+    { label: 'IT 개발 시니어', company: 'IT솔루션즈' },
+    { label: 'IT 프로젝트 매니저', company: null },
+    { label: '디자인 리드', company: '디자인팩토리' },
+    { label: '디자이너 수석', company: null },
+    { label: '영업 팀장', company: '영업파트너스' },
+    { label: '경영기획 임원', company: null },
+    { label: '인사 총무 팀장', company: null },
+  ];
+
+  var input    = document.getElementById('search-input');
+  var clearBtn = document.getElementById('search-clear');
+  var dropdown = document.getElementById('search-dropdown');
+  var root     = document.getElementById('search-view-root');
+  var viewRecent  = document.getElementById('view-recent');
+  var viewSuggest = document.getElementById('view-suggest');
+  var viewEmpty   = document.getElementById('view-empty');
+  var suggestList = document.getElementById('suggest-list');
+  var companyList = document.getElementById('company-list');
+
+  function showDropdown(q) {
+    dropdown.style.display = 'block';
+
+    if (!q.trim()) {
+      viewRecent.style.display  = 'block';
+      viewSuggest.style.display = 'none';
+      viewEmpty.style.display   = 'none';
+      return;
+    }
+
+    var matches = KEYWORDS.filter(function(k) { return k.label.indexOf(q) !== -1; });
+    viewRecent.style.display = 'none';
+
+    if (matches.length === 0) {
+      viewSuggest.style.display = 'none';
+      viewEmpty.style.display   = 'block';
+      return;
+    }
+
+    viewEmpty.style.display   = 'none';
+    viewSuggest.style.display = 'block';
+
+    var companies = matches.filter(function(k) { return k.company; });
+
+    suggestList.innerHTML = matches.map(function(k) {
+      return '<div class="np-search-item" data-keyword="' + k.label + '">' +
+        '<svg class="w-5 h-5 text-neutral-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg>' +
+        '<span>' + k.label.replace(q, '<span class="np-search-item-keyword">' + q + '</span>') + '</span>' +
+        '</div>';
+    }).join('');
+
+    companyList.innerHTML = companies.length
+      ? companies.map(function(k) {
+          return '<div class="np-search-item" data-keyword="' + k.company + '">' +
+            '<svg class="w-5 h-5 text-neutral-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>' +
+            '<span>' + k.company.replace(q, '<span class="np-search-item-keyword">' + q + '</span>') + '</span>' +
+            '</div>';
+        }).join('')
+      : '<p class="text-base text-neutral-400 px-4 py-3">관련 회사 없음</p>';
+  }
+
+  function hideDropdown() {
+    dropdown.style.display = 'none';
+  }
+
+  function selectKeyword(keyword) {
+    input.value = keyword;
+    clearBtn.style.display = 'block';
+    hideDropdown();
+    input.focus();
+  }
+
+  input.addEventListener('focus', function() {
+    showDropdown(input.value);
+  });
+
+  input.addEventListener('input', function() {
+    var q = input.value;
+    clearBtn.style.display = q ? 'block' : 'none';
+    showDropdown(q);
+  });
+
+  clearBtn.addEventListener('click', function() {
+    input.value = '';
+    clearBtn.style.display = 'none';
+    hideDropdown();
+    input.focus();
+  });
+
+  dropdown.addEventListener('click', function(e) {
+    var item = e.target.closest('[data-keyword]');
+    if (item) selectKeyword(item.dataset.keyword);
+  });
+
+  document.addEventListener('mousedown', function(e) {
+    if (root && !root.contains(e.target)) {
+      hideDropdown();
+    }
+  });
+
+  var recentItems = viewRecent.querySelectorAll('.np-search-item');
+  recentItems.forEach(function(item) {
+    item.addEventListener('click', function() {
+      selectKeyword(item.querySelector('span.flex-1').textContent.trim());
+    });
+  });
+})();
+</script>

@@ -1,6 +1,6 @@
 <div class="max-w-4xl">
-  <h1 class="text-2xl font-bold text-neutral-900 mb-1">버튼 (Button)</h1>
-  <p class="text-neutral-600 mb-8">Primary / Secondary / Ghost / Grey / Grey Stroke + 크기 · 아이콘 · FAB</p>
+  <h1 class="text-2xl font-bold text-neutral-900 mb-1">버튼 & 칩 (Button & Chip)</h1>
+  <p class="text-neutral-600 mb-8">Primary / Secondary / Ghost / Grey / Grey Stroke + 크기 · 아이콘 · FAB · 칩</p>
 
   <!-- Variants -->
   <section class="mb-10">
@@ -27,34 +27,66 @@
   <!-- With Icon -->
   <section class="mb-10">
     <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">With Icon</h2>
-    <div class="bg-neutral-0 border border-neutral-200 rounded-card p-6 flex flex-wrap gap-3 items-center">
-      <button class="np-btn np-btn-primary np-btn-md">
+    <div class="bg-neutral-0 border border-neutral-200 rounded-card p-6 flex flex-col gap-3">
+      <div class="flex flex-wrap gap-3 items-center">
+        <button class="np-btn np-btn-primary np-btn-md">
+          <svg class="w-icon-sm h-icon-sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg>
+          Primary
+        </button>
+        <button class="np-btn np-btn-secondary np-btn-md">
+          <svg class="w-icon-sm h-icon-sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+          Secondary
+        </button>
+        <button class="np-btn np-btn-ghost np-btn-md">
+          <svg class="w-icon-sm h-icon-sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 0 0 0 6.364L12 20.364l7.682-7.682a4.5 4.5 0 0 0-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 0 0-6.364 0z"/></svg>
+          Ghost
+        </button>
+        <button class="np-btn np-btn-grey np-btn-md">
+          <svg class="w-icon-sm h-icon-sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          Grey
+        </button>
+        <button class="np-btn np-btn-grey-stroke np-btn-md">
+          <svg class="w-icon-sm h-icon-sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          Grey Stroke
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Icon Button -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">Icon Button — Variants</h2>
+    <div class="bg-neutral-50 border border-neutral-200 rounded-card p-6 flex flex-wrap gap-3 items-center">
+      <button class="np-btn-icon np-btn-icon-md np-btn-icon-primary">
         <svg class="w-icon-sm h-icon-sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg>
-        채용 검색
       </button>
-      <button class="np-btn np-btn-secondary np-btn-md">
+      <button class="np-btn-icon np-btn-icon-md np-btn-icon-secondary">
         <svg class="w-icon-sm h-icon-sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
-        이력서 등록
       </button>
-      <button class="np-btn np-btn-grey np-btn-md">
-        지원하기
+      <button class="np-btn-icon np-btn-icon-md np-btn-icon-ghost">
+        <svg class="w-icon-sm h-icon-sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 0 0 0 6.364L12 20.364l7.682-7.682a4.5 4.5 0 0 0-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 0 0-6.364 0z"/></svg>
+      </button>
+      <button class="np-btn-icon np-btn-icon-md np-btn-icon-grey">
+        <svg class="w-icon-sm h-icon-sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0 1 18 14.158V11a6.002 6.002 0 0 0-4-5.659V5a2 2 0 1 0-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 1 1-6 0v-1m6 0H9"/></svg>
+      </button>
+      <button class="np-btn-icon np-btn-icon-md np-btn-icon-grey-stroke">
         <svg class="w-icon-sm h-icon-sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
       </button>
     </div>
   </section>
 
-  <!-- Icon Only -->
+  <!-- Icon Button Sizes -->
   <section class="mb-10">
-    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">Icon Button</h2>
-    <div class="bg-neutral-0 border border-neutral-200 rounded-card p-6 flex flex-wrap gap-3 items-center">
-      <button class="np-btn-icon np-btn-icon-sm bg-neutral-100 hover:bg-neutral-200 text-neutral-800 transition-colors duration-[120ms]">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">Icon Button — Sizes</h2>
+    <div class="bg-neutral-50 border border-neutral-200 rounded-card p-6 flex flex-wrap gap-3 items-center">
+      <button class="np-btn-icon np-btn-icon-sm np-btn-icon-grey">
         <svg class="w-icon-sm h-icon-sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 0 0 0 6.364L12 20.364l7.682-7.682a4.5 4.5 0 0 0-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 0 0-6.364 0z"/></svg>
       </button>
-      <button class="np-btn-icon np-btn-icon-md bg-neutral-100 hover:bg-neutral-200 text-neutral-800 transition-colors duration-[120ms]">
-        <svg class="w-icon-md h-icon-md" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0 1 18 14.158V11a6.002 6.002 0 0 0-4-5.659V5a2 2 0 1 0-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 1 1-6 0v-1m6 0H9"/></svg>
+      <button class="np-btn-icon np-btn-icon-md np-btn-icon-grey">
+        <svg class="w-icon-sm h-icon-sm" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 0 0 0 6.364L12 20.364l7.682-7.682a4.5 4.5 0 0 0-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 0 0-6.364 0z"/></svg>
       </button>
-      <button class="np-btn-icon np-btn-icon-lg bg-primary-500 hover:bg-primary-400 text-neutral-0 transition-colors duration-[120ms]">
-        <svg class="w-icon-lg h-icon-lg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg>
+      <button class="np-btn-icon np-btn-icon-lg np-btn-icon-grey">
+        <svg class="w-icon-md h-icon-md" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 0 0 0 6.364L12 20.364l7.682-7.682a4.5 4.5 0 0 0-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 0 0-6.364 0z"/></svg>
       </button>
     </div>
     <p class="text-xs text-neutral-400 mt-2 px-1">SM(40) / MD(48) / LG(56)</p>
@@ -81,6 +113,65 @@
       <button class="np-btn np-btn-secondary np-btn-md" disabled>Secondary</button>
       <button class="np-btn np-btn-ghost np-btn-md" disabled>Ghost</button>
       <button class="np-btn np-btn-grey np-btn-md" disabled>Grey</button>
+      <button class="np-btn np-btn-grey-stroke np-btn-md" disabled>Grey Stroke</button>
+    </div>
+  </section>
+
+  <!-- ── Chip ── -->
+  <div class="border-t border-neutral-200 my-10"></div>
+  <h2 class="text-xl font-bold text-neutral-900 mb-1">칩 (Chip)</h2>
+  <p class="text-neutral-600 mb-8">필터·태그 선택에 사용하는 토글형 컴포넌트</p>
+
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">Default / Active</h2>
+    <div class="bg-neutral-0 border border-neutral-200 rounded-card p-6 flex flex-wrap gap-2">
+      <button class="np-chip">마케팅</button>
+      <button class="np-chip np-chip-active">영업</button>
+      <button class="np-chip">경영기획</button>
+      <button class="np-chip np-chip-active">IT·개발</button>
+      <button class="np-chip">인사·총무</button>
+      <button class="np-chip">재무·회계</button>
+      <button class="np-chip np-chip-active">디자인</button>
+      <button class="np-chip">생산·제조</button>
+    </div>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">With Icon</h2>
+    <div class="bg-neutral-0 border border-neutral-200 rounded-card p-6 flex flex-wrap gap-2">
+      <button class="np-chip np-chip-active">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        서울
+      </button>
+      <button class="np-chip">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        경기도
+      </button>
+      <button class="np-chip">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        부산
+      </button>
+      <button class="np-chip np-chip-active">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z"/></svg>
+        저장됨
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">실사용 예시 — 직무 필터</h2>
+    <div class="bg-neutral-50 border border-neutral-200 rounded-card p-6">
+      <p class="text-lg font-semibold text-neutral-800 mb-3">직무 선택</p>
+      <div class="flex flex-wrap gap-2">
+        <button class="np-chip np-chip-active" onclick="this.classList.toggle('np-chip-active')">전체</button>
+        <button class="np-chip" onclick="this.classList.toggle('np-chip-active')">마케팅</button>
+        <button class="np-chip" onclick="this.classList.toggle('np-chip-active')">영업</button>
+        <button class="np-chip" onclick="this.classList.toggle('np-chip-active')">IT·개발</button>
+        <button class="np-chip" onclick="this.classList.toggle('np-chip-active')">디자인</button>
+        <button class="np-chip" onclick="this.classList.toggle('np-chip-active')">경영기획</button>
+        <button class="np-chip" onclick="this.classList.toggle('np-chip-active')">인사·총무</button>
+      </div>
     </div>
   </section>
 </div>

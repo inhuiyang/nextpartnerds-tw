@@ -1,0 +1,83 @@
+<div class="max-w-2xl">
+  <h1 class="text-2xl font-bold text-neutral-900 mb-1">체크박스 (Checkbox)</h1>
+  <p class="text-neutral-600 mb-8">Default / Checked / Indeterminate / Disabled</p>
+
+  <!-- States -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">States</h2>
+    <div class="bg-neutral-0 border border-neutral-200 rounded-card p-6 flex flex-col gap-5">
+
+      <label class="np-checkbox">
+        <input type="checkbox" class="np-checkbox-input" />
+        <span class="np-checkbox-label">Default (미선택)</span>
+      </label>
+
+      <label class="np-checkbox">
+        <input type="checkbox" class="np-checkbox-input" checked />
+        <span class="np-checkbox-label">Checked (선택됨)</span>
+      </label>
+
+      <label class="np-checkbox" id="indeterminate-demo">
+        <input type="checkbox" class="np-checkbox-input" id="indeterminate-cb" />
+        <span class="np-checkbox-label">Indeterminate (부분 선택)</span>
+      </label>
+
+      <label class="np-checkbox">
+        <input type="checkbox" class="np-checkbox-input" disabled />
+        <span class="np-checkbox-label text-neutral-400">Disabled (미선택)</span>
+      </label>
+
+      <label class="np-checkbox">
+        <input type="checkbox" class="np-checkbox-input" checked disabled />
+        <span class="np-checkbox-label text-neutral-400">Disabled Checked (선택 비활성)</span>
+      </label>
+
+    </div>
+  </section>
+
+  <!-- 실사용 예시 — 전체 선택 -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">실사용 예시 — 전체 선택</h2>
+    <div class="bg-neutral-50 border border-neutral-200 rounded-card p-6 flex flex-col gap-4">
+
+      <label class="np-checkbox" id="select-all-wrap">
+        <input type="checkbox" class="np-checkbox-input" id="select-all" onchange="toggleAll(this)" />
+        <span class="np-checkbox-label font-semibold">전체 동의</span>
+      </label>
+
+      <div class="border-t border-neutral-200 pt-4 flex flex-col gap-3 pl-2">
+        <label class="np-checkbox">
+          <input type="checkbox" class="np-checkbox-input child-cb" onchange="syncParent()" />
+          <span class="np-checkbox-label">이용약관 동의 <span class="text-primary-500 text-base">(필수)</span></span>
+        </label>
+        <label class="np-checkbox">
+          <input type="checkbox" class="np-checkbox-input child-cb" onchange="syncParent()" />
+          <span class="np-checkbox-label">개인정보 수집·이용 동의 <span class="text-primary-500 text-base">(필수)</span></span>
+        </label>
+        <label class="np-checkbox">
+          <input type="checkbox" class="np-checkbox-input child-cb" onchange="syncParent()" />
+          <span class="np-checkbox-label">마케팅 정보 수신 동의 <span class="text-neutral-400 text-base">(선택)</span></span>
+        </label>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+<script>
+  document.getElementById('indeterminate-cb').indeterminate = true;
+
+  function toggleAll(master) {
+    document.querySelectorAll('.child-cb').forEach(cb => cb.checked = master.checked);
+    master.indeterminate = false;
+  }
+
+  function syncParent() {
+    const children = document.querySelectorAll('.child-cb');
+    const checkedCount = [...children].filter(cb => cb.checked).length;
+    const master = document.getElementById('select-all');
+    master.checked = checkedCount === children.length;
+    master.indeterminate = checkedCount > 0 && checkedCount < children.length;
+  }
+</script>

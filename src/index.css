@@ -15,7 +15,7 @@
   .np-btn {
     @apply inline-flex items-center justify-center gap-2
            font-base font-bold
-           rounded-button border-none cursor-pointer
+           rounded-button border border-transparent cursor-pointer
            transition-all duration-[120ms] ease-out
            whitespace-nowrap relative select-none;
   }
@@ -38,7 +38,7 @@
   }
   .np-btn-secondary {
     @apply bg-neutral-0 text-primary-500
-           border border-primary-500
+           border-primary-500
            hover:bg-primary-50 active:bg-primary-100;
   }
   .np-btn-ghost {
@@ -46,7 +46,7 @@
            hover:bg-primary-50 active:bg-primary-100;
   }
   .np-btn-grey {
-    @apply bg-neutral-100 text-neutral-800
+    @apply bg-neutral-100 text-neutral-400
            hover:bg-neutral-200 active:bg-neutral-200;
   }
   .np-btn-grey-stroke {
@@ -55,15 +55,47 @@
            hover:bg-neutral-50 active:bg-neutral-100;
   }
 
-  /* Icon Button */
+  /* ── Icon Button ── */
   .np-btn-icon {
     @apply inline-flex items-center justify-center
-           rounded-button border-none cursor-pointer
-           transition-all duration-[120ms] ease-out;
+           rounded-button border border-solid border-transparent cursor-pointer
+           transition-all duration-[120ms] ease-out select-none;
   }
+  .np-btn-icon:focus-visible {
+    @apply outline-none shadow-[0_0_0_3px_rgba(255,184,159,0.35)];
+  }
+  .np-btn-icon:disabled {
+    @apply opacity-40 cursor-not-allowed pointer-events-none;
+  }
+
+  /* Icon Button Sizes */
   .np-btn-icon-sm { @apply w-10 h-10; }
   .np-btn-icon-md { @apply w-12 h-12; }
   .np-btn-icon-lg { @apply w-14 h-14; }
+
+  /* Icon Button Variants */
+  .np-btn-icon-primary {
+    @apply bg-primary-500 text-neutral-0
+           hover:bg-primary-400 active:bg-primary-300;
+  }
+  .np-btn-icon-secondary {
+    @apply bg-neutral-0 text-primary-500
+           border-primary-500
+           hover:bg-primary-50 active:bg-primary-100;
+  }
+  .np-btn-icon-ghost {
+    @apply bg-transparent text-primary-500
+           hover:bg-primary-50 active:bg-primary-100;
+  }
+  .np-btn-icon-grey {
+    @apply bg-neutral-100 text-neutral-800
+           hover:bg-neutral-200 active:bg-neutral-200;
+  }
+  .np-btn-icon-grey-stroke {
+    @apply bg-neutral-0 text-neutral-800
+           border-neutral-200
+           hover:bg-neutral-50 active:bg-neutral-100;
+  }
 
   /* FAB */
   .np-fab {
@@ -99,6 +131,169 @@
   .np-textfield:disabled {
     @apply bg-neutral-50 text-neutral-400 cursor-not-allowed;
   }
+
+  /* ── Input Stepper ── */
+  .np-stepper {
+    @apply inline-flex items-center self-start
+           rounded-button border border-neutral-200 bg-neutral-0
+           overflow-hidden;
+  }
+  .np-stepper-btn {
+    @apply flex items-center justify-center shrink-0
+           font-base text-neutral-800
+           bg-transparent border-none cursor-pointer select-none
+           transition-colors duration-[120ms] ease-out
+           hover:bg-neutral-50 active:bg-neutral-100;
+  }
+  .np-stepper-btn:disabled {
+    @apply text-neutral-200 cursor-not-allowed pointer-events-none;
+  }
+  .np-stepper-value {
+    @apply flex items-center justify-center
+           font-base font-bold text-neutral-900
+           border-x border-neutral-200 select-none;
+  }
+
+  /* Stepper Sizes */
+  .np-stepper-sm { @apply h-10; }
+  .np-stepper-sm .np-stepper-btn   { @apply w-10 h-10 text-xl; }
+  .np-stepper-sm .np-stepper-value { @apply w-10 text-base; }
+
+  .np-stepper-md { @apply h-14; }
+  .np-stepper-md .np-stepper-btn   { @apply w-14 h-14 text-2xl; }
+  .np-stepper-md .np-stepper-value { @apply w-14 text-xl; }
+
+  .np-stepper-wrap  { @apply flex flex-col gap-2; }
+  .np-stepper-label { @apply text-lg font-semibold text-neutral-800; }
+  .np-stepper-hint  { @apply text-base text-neutral-400 mt-1; }
+
+  /* ── Checkbox ── */
+  .np-checkbox {
+    @apply inline-flex items-center gap-3 cursor-pointer select-none;
+  }
+  .np-checkbox-input {
+    @apply appearance-none w-6 h-6 shrink-0
+           rounded-badge border-2 border-neutral-200
+           bg-neutral-0 cursor-pointer
+           transition-all duration-[120ms] ease-out;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14px;
+  }
+  .np-checkbox-input:checked {
+    @apply bg-primary-500 border-primary-500;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white' stroke-width='3'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M5 13l4 4L19 7'/%3E%3C/svg%3E");
+  }
+  .np-checkbox-input:indeterminate {
+    @apply bg-primary-500 border-primary-500;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white' stroke-width='3'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M5 12h14'/%3E%3C/svg%3E");
+  }
+  .np-checkbox-input:focus-visible {
+    @apply outline-none shadow-[0_0_0_3px_rgba(255,184,159,0.35)];
+  }
+  .np-checkbox-input:disabled {
+    @apply opacity-40 cursor-not-allowed;
+  }
+  .np-checkbox-label {
+    @apply text-lg text-neutral-800;
+  }
+  .np-checkbox:has(.np-checkbox-input:disabled) {
+    @apply cursor-not-allowed;
+  }
+
+  /* ── Radio Button ── */
+  .np-radio {
+    @apply inline-flex items-center gap-3 cursor-pointer select-none;
+  }
+  .np-radio-input {
+    @apply appearance-none w-6 h-6 shrink-0
+           rounded-full border-2 border-neutral-200
+           bg-neutral-0 cursor-pointer
+           transition-all duration-[120ms] ease-out;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .np-radio-input:checked {
+    @apply border-primary-500;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='5' fill='%23ff7f65'/%3E%3C/svg%3E");
+  }
+  .np-radio-input:focus-visible {
+    @apply outline-none shadow-[0_0_0_3px_rgba(255,184,159,0.35)];
+  }
+  .np-radio-input:disabled {
+    @apply opacity-40 cursor-not-allowed;
+  }
+  .np-radio-label {
+    @apply text-lg text-neutral-800;
+  }
+  .np-radio:has(.np-radio-input:disabled) {
+    @apply cursor-not-allowed;
+  }
+
+  /* ── Dropdown ── */
+  .np-dropdown { @apply relative inline-block; }
+  .np-dropdown-chevron {
+    @apply shrink-0 transition-transform duration-[120ms] ease-out;
+  }
+  .np-dropdown.open .np-dropdown-chevron { @apply rotate-180; }
+
+  .np-dropdown-menu {
+    @apply absolute left-0 top-full mt-2 min-w-full z-20
+           bg-neutral-0 border border-neutral-200 rounded-button
+           shadow-[0_4px_16px_rgba(0,0,0,0.10)]
+           overflow-hidden py-1;
+  }
+  .np-dropdown-item {
+    @apply flex items-center gap-3 px-5 py-3
+           font-base text-lg text-neutral-800 cursor-pointer
+           transition-colors duration-[120ms] ease-out
+           hover:bg-neutral-50 active:bg-neutral-100;
+  }
+  .np-dropdown-item.selected {
+    @apply text-primary-500 font-semibold bg-primary-50;
+  }
+  .np-dropdown-item.disabled {
+    @apply text-neutral-400 cursor-not-allowed pointer-events-none;
+  }
+  .np-dropdown-divider { @apply border-t border-neutral-100 my-1; }
+
+  /* ── Search Field ── */
+  .np-search {
+    @apply relative flex items-center
+           h-14 px-4 gap-2
+           bg-neutral-0 border border-neutral-200 rounded-search
+           transition-all duration-[120ms] ease-out;
+  }
+  .np-search:focus-within {
+    @apply border-primary-500 shadow-[0_0_0_3px_rgba(255,184,159,0.25)];
+  }
+  .np-search-input {
+    @apply flex-1 bg-transparent border-none outline-none
+           font-base text-xl text-neutral-900
+           placeholder:text-neutral-400;
+  }
+  .np-search-icon { @apply text-neutral-400 shrink-0; }
+  .np-search-clear {
+    @apply text-neutral-400 hover:text-neutral-600
+           cursor-pointer shrink-0 transition-colors duration-[120ms];
+  }
+
+  /* Search View (결과 드롭다운) */
+  .np-search-view {
+    @apply bg-neutral-0 border border-neutral-200 rounded-card
+           shadow-[0_4px_16px_rgba(0,0,0,0.08)] overflow-hidden;
+  }
+  .np-search-section-label {
+    @apply px-4 pt-4 pb-2 text-sm font-bold text-neutral-400 uppercase tracking-widest;
+  }
+  .np-search-item {
+    @apply flex items-center gap-3 px-4 py-3
+           text-lg text-neutral-800 cursor-pointer
+           transition-colors duration-[120ms] ease-out
+           hover:bg-neutral-50 active:bg-neutral-100;
+  }
+  .np-search-item-keyword { @apply font-bold text-primary-500; }
+  .np-search-divider { @apply border-t border-neutral-100 mx-4; }
 
   /* ── Chip — 시니어 가독성: text-lg, 높이 h-10 ── */
   .np-chip {

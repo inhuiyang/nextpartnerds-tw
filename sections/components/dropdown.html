@@ -1,0 +1,203 @@
+<div class="max-w-2xl">
+  <h1 class="text-2xl font-bold text-neutral-900 mb-1">드롭다운 (Dropdown)</h1>
+  <p class="text-neutral-600 mb-8">기존 버튼 컴포넌트를 트리거로 사용하는 드롭다운 리스트</p>
+
+  <!-- Button Variants as Trigger -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">Button Variants — MD (48px)</h2>
+    <div class="bg-neutral-0 border border-neutral-200 rounded-card p-6 flex flex-wrap gap-3 items-start">
+
+      <div class="np-dropdown">
+        <button class="np-btn np-btn-primary np-btn-md" onclick="toggleDropdown(this)">
+          Primary
+          <svg class="np-dropdown-chevron w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="np-dropdown-menu" style="display:none">
+          <div class="np-dropdown-item" onclick="selectItem(this)">항목 1</div>
+          <div class="np-dropdown-item" onclick="selectItem(this)">항목 2</div>
+          <div class="np-dropdown-item" onclick="selectItem(this)">항목 3</div>
+        </div>
+      </div>
+
+      <div class="np-dropdown">
+        <button class="np-btn np-btn-secondary np-btn-md" onclick="toggleDropdown(this)">
+          Secondary
+          <svg class="np-dropdown-chevron w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="np-dropdown-menu" style="display:none">
+          <div class="np-dropdown-item" onclick="selectItem(this)">항목 1</div>
+          <div class="np-dropdown-item" onclick="selectItem(this)">항목 2</div>
+          <div class="np-dropdown-item" onclick="selectItem(this)">항목 3</div>
+        </div>
+      </div>
+
+      <div class="np-dropdown">
+        <button class="np-btn np-btn-ghost np-btn-md" onclick="toggleDropdown(this)">
+          Ghost
+          <svg class="np-dropdown-chevron w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="np-dropdown-menu" style="display:none">
+          <div class="np-dropdown-item" onclick="selectItem(this)">항목 1</div>
+          <div class="np-dropdown-item" onclick="selectItem(this)">항목 2</div>
+          <div class="np-dropdown-item" onclick="selectItem(this)">항목 3</div>
+        </div>
+      </div>
+
+      <div class="np-dropdown">
+        <button class="np-btn np-btn-grey np-btn-md" onclick="toggleDropdown(this)">
+          Grey
+          <svg class="np-dropdown-chevron w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="np-dropdown-menu" style="display:none">
+          <div class="np-dropdown-item" onclick="selectItem(this)">항목 1</div>
+          <div class="np-dropdown-item" onclick="selectItem(this)">항목 2</div>
+          <div class="np-dropdown-item" onclick="selectItem(this)">항목 3</div>
+        </div>
+      </div>
+
+      <div class="np-dropdown">
+        <button class="np-btn np-btn-grey-stroke np-btn-md" onclick="toggleDropdown(this)">
+          Grey Stroke
+          <svg class="np-dropdown-chevron w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="np-dropdown-menu" style="display:none">
+          <div class="np-dropdown-item" onclick="selectItem(this)">항목 1</div>
+          <div class="np-dropdown-item" onclick="selectItem(this)">항목 2</div>
+          <div class="np-dropdown-item" onclick="selectItem(this)">항목 3</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Dropdown List States -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">List Item States</h2>
+    <div class="bg-neutral-0 border border-neutral-200 rounded-card p-6 flex flex-wrap gap-6 items-start">
+
+      <!-- Default list -->
+      <div class="flex flex-col gap-2">
+        <span class="text-base text-neutral-400">Default</span>
+        <div class="np-dropdown">
+          <button class="np-btn np-btn-grey-stroke np-btn-md" onclick="toggleDropdown(this)">
+            고용 형태
+            <svg class="np-dropdown-chevron w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="np-dropdown-menu" style="display:none">
+            <div class="np-dropdown-item" onclick="selectItem(this)">정규직</div>
+            <div class="np-dropdown-item" onclick="selectItem(this)">계약직</div>
+            <div class="np-dropdown-item" onclick="selectItem(this)">파트타임</div>
+            <div class="np-dropdown-item" onclick="selectItem(this)">프리랜서</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- With selected + disabled item -->
+      <div class="flex flex-col gap-2">
+        <span class="text-base text-neutral-400">Selected · Disabled 항목 포함</span>
+        <div class="np-dropdown">
+          <button class="np-btn np-btn-grey-stroke np-btn-md" onclick="toggleDropdown(this)">
+            지역
+            <svg class="np-dropdown-chevron w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="np-dropdown-menu" style="display:none">
+            <div class="np-dropdown-item selected" onclick="selectItem(this)">서울</div>
+            <div class="np-dropdown-item" onclick="selectItem(this)">경기도</div>
+            <div class="np-dropdown-item" onclick="selectItem(this)">인천</div>
+            <div class="np-dropdown-divider"></div>
+            <div class="np-dropdown-item disabled">부산 (마감)</div>
+            <div class="np-dropdown-item disabled">대구 (마감)</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 실사용 예시 -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">실사용 예시 — 채용 필터</h2>
+    <div class="bg-neutral-50 border border-neutral-200 rounded-card p-6 flex flex-col gap-5">
+      <p class="text-lg font-semibold text-neutral-800">채용 조건 설정</p>
+
+      <div class="flex flex-col gap-2">
+        <label class="text-lg font-semibold text-neutral-800">고용 형태</label>
+        <div class="np-dropdown w-full">
+          <button class="np-btn np-btn-grey-stroke np-btn-md w-full justify-between" onclick="toggleDropdown(this)">
+            <span class="filter-label text-neutral-400">고용 형태를 선택하세요</span>
+            <svg class="np-dropdown-chevron w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="np-dropdown-menu" style="display:none">
+            <div class="np-dropdown-item" onclick="selectItemLabel(this)">정규직</div>
+            <div class="np-dropdown-item" onclick="selectItemLabel(this)">계약직</div>
+            <div class="np-dropdown-item" onclick="selectItemLabel(this)">파트타임 · 아르바이트</div>
+            <div class="np-dropdown-item" onclick="selectItemLabel(this)">프리랜서</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <label class="text-lg font-semibold text-neutral-800">경력 구분</label>
+        <div class="np-dropdown w-full">
+          <button class="np-btn np-btn-grey-stroke np-btn-md w-full justify-between" onclick="toggleDropdown(this)">
+            <span class="filter-label">경력직</span>
+            <svg class="np-dropdown-chevron w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="np-dropdown-menu" style="display:none">
+            <div class="np-dropdown-item" onclick="selectItemLabel(this)">신입</div>
+            <div class="np-dropdown-item selected" onclick="selectItemLabel(this)">경력직</div>
+            <div class="np-dropdown-item" onclick="selectItemLabel(this)">신입·경력 무관</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+<script>
+function toggleDropdown(trigger) {
+  const dropdown = trigger.closest('.np-dropdown');
+  const menu = dropdown.querySelector('.np-dropdown-menu');
+  const isOpen = dropdown.classList.contains('open');
+
+  closeAllDropdowns();
+
+  if (!isOpen) {
+    dropdown.classList.add('open');
+    menu.style.display = '';
+  }
+}
+
+function selectItem(item) {
+  const menu = item.closest('.np-dropdown-menu');
+  menu.querySelectorAll('.np-dropdown-item').forEach(i => i.classList.remove('selected'));
+  item.classList.add('selected');
+  closeAllDropdowns();
+}
+
+function selectItemLabel(item) {
+  const dropdown = item.closest('.np-dropdown');
+  const menu = dropdown.querySelector('.np-dropdown-menu');
+  const label = dropdown.querySelector('.filter-label');
+
+  menu.querySelectorAll('.np-dropdown-item').forEach(i => i.classList.remove('selected'));
+  item.classList.add('selected');
+  label.textContent = item.textContent.trim();
+  label.classList.remove('text-neutral-400');
+
+  closeAllDropdowns();
+}
+
+function closeAllDropdowns() {
+  document.querySelectorAll('.np-dropdown.open').forEach(dd => {
+    dd.classList.remove('open');
+    dd.querySelector('.np-dropdown-menu').style.display = 'none';
+  });
+}
+
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.np-dropdown')) closeAllDropdowns();
+});
+</script>

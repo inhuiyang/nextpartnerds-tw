@@ -6,6 +6,12 @@ async function loadSection(section) {
     const res = await fetch(`sections/${section}.html`);
     if (!res.ok) throw new Error(`${res.status}`);
     container.innerHTML = await res.text();
+    container.querySelectorAll('script').forEach(orig => {
+      const script = document.createElement('script');
+      script.textContent = orig.textContent;
+      document.body.appendChild(script);
+      document.body.removeChild(script);
+    });
   } catch (e) {
     container.innerHTML = `<p class="text-error-500">섹션을 불러올 수 없습니다: sections/${section}.html</p>`;
   }
