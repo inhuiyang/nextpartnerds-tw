@@ -1,0 +1,142 @@
+<div class="max-w-4xl">
+  <h1 class="text-2xl font-bold text-neutral-900 mb-1">잡 카드 (Job Card)</h1>
+  <p class="text-neutral-600 mb-8">3 variants · 저장 버튼 포함 · 슬롯 순서 고정 · 흰색 배경</p>
+
+  <!-- Variants -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">Variants</h2>
+
+    <!-- Filter chips -->
+    <div class="flex gap-2 flex-wrap mb-6" id="card-filter">
+      <button class="np-chip np-chip-active" data-filter="all">전체 보기</button>
+      <button class="np-chip" data-filter="recommended">Recommended</button>
+      <button class="np-chip" data-filter="default">Default</button>
+      <button class="np-chip" data-filter="public">Public</button>
+    </div>
+
+    <!-- Card grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="card-grid">
+
+      <!-- ── Recommended ── -->
+      <div class="np-job-card np-job-card-recommended" data-card="recommended">
+        <!-- 상단: 매칭률 + 마감 -->
+        <div class="flex items-center justify-between mb-3">
+          <span class="np-job-card-badge">매칭률 94%</span>
+          <span class="np-job-card-urgency">3일 후 마감</span>
+        </div>
+        <!-- 제목 + 북마크 -->
+        <div class="flex items-start justify-between gap-2 mb-3">
+          <h3 class="np-job-card-title">카페 바리스타 보조 (파트 타임)</h3>
+          <button class="np-job-card-bookmark" aria-label="저장">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
+            </svg>
+          </button>
+        </div>
+        <!-- 구분선 -->
+        <div class="border-t border-neutral-100 mb-3"></div>
+        <!-- 메타 -->
+        <p class="np-job-card-meta mb-1">서울 마포구&nbsp;&nbsp;&nbsp;파트타임</p>
+        <p class="np-job-card-hours mb-3">오전 9시 ~ 오후 2시</p>
+        <!-- 급여 -->
+        <p class="np-job-card-pay mb-3">
+          시급 12,000원<span class="np-job-card-pay-note">(주 5일)</span>
+        </p>
+        <!-- 매칭 이유 -->
+        <ul class="np-job-card-reasons mb-4">
+          <li class="np-job-card-reason">서비스 업무 경력과 유사한 직무</li>
+          <li class="np-job-card-reason">거주지에서 도보 이동 가능</li>
+          <li class="np-job-card-reason">희망 근무 시간과 일치</li>
+        </ul>
+        <!-- CTA -->
+        <button class="np-btn np-btn-ghost np-btn-md w-full mt-auto">자세히 보기</button>
+      </div>
+
+      <!-- ── Default ── -->
+      <div class="np-job-card" data-card="default">
+        <!-- 상단: 마감일 -->
+        <div class="flex justify-end mb-3">
+          <span class="np-job-card-deadline">2026.05.15 마감</span>
+        </div>
+        <!-- 제목 + 북마크 -->
+        <div class="flex items-start justify-between gap-2 mb-3">
+          <h3 class="np-job-card-title">편의점 야간 관리 스태프</h3>
+          <button class="np-job-card-bookmark" aria-label="저장">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
+            </svg>
+          </button>
+        </div>
+        <!-- 구분선 -->
+        <div class="border-t border-neutral-100 mb-3"></div>
+        <!-- 메타 -->
+        <p class="np-job-card-meta mb-1">서울 은평구&nbsp;&nbsp;&nbsp;파트타임</p>
+        <p class="np-job-card-hours mb-3">오후 10시 ~ 오전 6시</p>
+        <!-- 급여 -->
+        <p class="np-job-card-pay mb-4">시급 11,000원</p>
+        <!-- CTA -->
+        <button class="np-btn np-btn-ghost np-btn-md w-full mt-auto">자세히 보기</button>
+      </div>
+
+      <!-- ── Public ── -->
+      <div class="np-job-card" data-card="public">
+        <!-- 상단: 마감일 -->
+        <div class="flex justify-end mb-3">
+          <span class="np-job-card-deadline">2026.05.20 마감</span>
+        </div>
+        <!-- 제목 + 북마크 -->
+        <div class="flex items-start justify-between gap-2 mb-3">
+          <h3 class="np-job-card-title">노인복지관 생활지원사 (사회서비스형)</h3>
+          <button class="np-job-card-bookmark" aria-label="저장">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
+            </svg>
+          </button>
+        </div>
+        <!-- 구분선 -->
+        <div class="border-t border-neutral-100 mb-3"></div>
+        <!-- 메타 -->
+        <p class="np-job-card-meta mb-1">서울 성동구&nbsp;&nbsp;&nbsp;공공일자리</p>
+        <p class="np-job-card-hours mb-3">오전 9시 ~ 오후 3시&nbsp;&nbsp;&nbsp;근무 기간 6개월</p>
+        <!-- 급여 -->
+        <p class="np-job-card-pay mb-4">
+          월 590,000원<span class="np-job-card-pay-note">(사회보험 지원)</span>
+        </p>
+        <!-- CTA -->
+        <button class="np-btn np-btn-ghost np-btn-md w-full mt-auto">자세히 보기</button>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+<script>
+(function () {
+  function onClick(e) {
+    var btn = e.target.closest('[data-filter]');
+    if (!btn) return;
+    var filter = btn.dataset.filter;
+
+    /* chip active 상태 */
+    var bar = document.getElementById('card-filter');
+    if (!bar) return;
+    bar.querySelectorAll('[data-filter]').forEach(function (b) {
+      b.classList.remove('np-chip-active');
+    });
+    btn.classList.add('np-chip-active');
+
+    /* 카드 표시/숨김 */
+    var grid = document.getElementById('card-grid');
+    if (!grid) return;
+    grid.querySelectorAll('[data-card]').forEach(function (card) {
+      card.style.display = (filter === 'all' || card.dataset.card === filter) ? '' : 'none';
+    });
+  }
+
+  document.addEventListener('click', onClick);
+  window._sectionCleanup = function () {
+    document.removeEventListener('click', onClick);
+  };
+})();
+</script>
