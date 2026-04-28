@@ -3,8 +3,15 @@ const navItems = document.querySelectorAll('.nav-item[data-section]');
 
 async function loadSection(section) {
   try {
-    const res = await fetch(`sections/${section}.html`);
+    const res = await fetch(`sections/${section}.html?v=${Date.now()}`);
     if (!res.ok) throw new Error(`${res.status}`);
+
+    // 이전 섹션 정리
+    if (typeof window._sectionCleanup === 'function') {
+      window._sectionCleanup();
+      window._sectionCleanup = null;
+    }
+
     container.innerHTML = await res.text();
     container.querySelectorAll('script').forEach(orig => {
       const script = document.createElement('script');

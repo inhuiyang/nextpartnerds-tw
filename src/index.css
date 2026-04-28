@@ -231,11 +231,13 @@
   }
 
   /* ── Dropdown ── */
-  .np-dropdown { @apply relative inline-block; }
+  details.np-dropdown { @apply relative inline-block; }
+  details.np-dropdown > summary { list-style: none; }
+  details.np-dropdown > summary::-webkit-details-marker { display: none; }
   .np-dropdown-chevron {
     @apply shrink-0 transition-transform duration-[120ms] ease-out;
   }
-  .np-dropdown.open .np-dropdown-chevron { @apply rotate-180; }
+  details.np-dropdown[open] .np-dropdown-chevron { @apply rotate-180; }
 
   .np-dropdown-menu {
     @apply absolute left-0 top-full mt-2 min-w-full z-20
