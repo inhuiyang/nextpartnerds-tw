@@ -72,6 +72,10 @@ module.exports = {
       maxWidth: {
         content: '1212px',
       },
+      backgroundImage: {
+        'gradient-fluid':
+          'linear-gradient(135deg, #FFAA00 0%, #FF2D9E 28%, #7B4FA6 52%, #80BFFF 72%, #67E8D8 88%, #FFE680 100%)',
+      },
     },
   },
   plugins: [],

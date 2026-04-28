@@ -532,7 +532,7 @@
     border: 2px solid transparent;
     background:
       linear-gradient(#fff, #fff) padding-box,
-      linear-gradient(135deg, #ff7f65 0%, #a855f7 55%, #4caf50 100%) border-box;
+      linear-gradient(135deg, #FFAA00 0%, #FF2D9E 28%, #7B4FA6 52%, #80BFFF 72%, #67E8D8 88%, #FFE680 100%) border-box;
   }
   .np-job-card-badge {
     @apply inline-flex items-center px-3 py-1 rounded-pill
