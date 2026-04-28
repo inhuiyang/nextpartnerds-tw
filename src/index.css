@@ -443,6 +443,27 @@
            text-[10px] font-bold flex items-center justify-center;
   }
 
+  /* ── Tab ── */
+  .np-tab-bar {
+    @apply flex border-b border-neutral-200 overflow-x-auto;
+    scrollbar-width: none;
+  }
+  .np-tab-bar::-webkit-scrollbar { display: none; }
+  .np-tab-item {
+    @apply px-4 py-3 text-base font-medium text-neutral-400
+           cursor-pointer whitespace-nowrap select-none
+           border-b-2 border-transparent
+           transition-colors duration-[120ms] ease-out;
+    margin-bottom: -1px;
+  }
+  .np-tab-item:hover { @apply text-neutral-800; }
+  .np-tab-item.active {
+    @apply text-primary-500 border-primary-500 font-bold;
+  }
+  .np-tab-item.disabled {
+    @apply text-neutral-200 cursor-not-allowed pointer-events-none;
+  }
+
   /* ── Footer ── */
   .np-footer {
     @apply w-full bg-neutral-0 border-t border-neutral-200 px-8 py-10;

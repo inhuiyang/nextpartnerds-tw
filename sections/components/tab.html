@@ -1,0 +1,124 @@
+<div class="max-w-2xl">
+  <h1 class="text-2xl font-bold text-neutral-900 mb-1">탭 (Tab)</h1>
+  <p class="text-neutral-600 mb-8">콘텐츠 영역을 전환하는 탭 컴포넌트</p>
+
+  <!-- States -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">States</h2>
+    <div class="bg-neutral-0 border border-neutral-200 rounded-card overflow-hidden">
+      <div class="np-tab-bar">
+        <div class="np-tab-item active">선택됨</div>
+        <div class="np-tab-item">기본</div>
+        <div class="np-tab-item">기본</div>
+        <div class="np-tab-item disabled">비활성</div>
+      </div>
+      <div class="px-4 py-6 text-sm text-neutral-400">탭 콘텐츠 영역</div>
+    </div>
+  </section>
+
+  <!-- 실사용 예시 1: 지원 현황 -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">실사용 예시 — 지원 현황</h2>
+    <div class="bg-neutral-0 border border-neutral-200 rounded-card overflow-hidden">
+      <div class="np-tab-bar" id="tab-apply-bar">
+        <div class="np-tab-item active" data-tab="apply-all">전체</div>
+        <div class="np-tab-item" data-tab="apply-review">서류검토중</div>
+        <div class="np-tab-item" data-tab="apply-interview">면접예정</div>
+        <div class="np-tab-item" data-tab="apply-passed">최종합격</div>
+        <div class="np-tab-item" data-tab="apply-failed">불합격</div>
+      </div>
+      <div class="px-5 py-6">
+        <div id="apply-all">
+          <p class="text-base font-semibold text-neutral-900 mb-1">총 12건의 지원 내역</p>
+          <p class="text-sm text-neutral-400">서류검토중 3 · 면접예정 2 · 최종합격 1 · 불합격 6</p>
+        </div>
+        <div id="apply-review" style="display:none">
+          <p class="text-base font-semibold text-neutral-900 mb-1">서류검토중 3건</p>
+          <p class="text-sm text-neutral-400">담당자가 이력서를 검토하고 있습니다</p>
+        </div>
+        <div id="apply-interview" style="display:none">
+          <p class="text-base font-semibold text-neutral-900 mb-1">면접예정 2건</p>
+          <p class="text-sm text-neutral-400">면접 일정을 확인하세요</p>
+        </div>
+        <div id="apply-passed" style="display:none">
+          <p class="text-base font-semibold text-neutral-900 mb-1">최종합격 1건</p>
+          <p class="text-sm text-neutral-400">축하드립니다!</p>
+        </div>
+        <div id="apply-failed" style="display:none">
+          <p class="text-base font-semibold text-neutral-900 mb-1">불합격 6건</p>
+          <p class="text-sm text-neutral-400">다른 공고에 다시 도전해보세요</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 실사용 예시 2: 일자리 카테고리 (스크롤) -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">실사용 예시 — 일자리 카테고리 (스크롤)</h2>
+    <div class="bg-neutral-0 border border-neutral-200 rounded-card overflow-hidden">
+      <div class="np-tab-bar" id="tab-job-bar">
+        <div class="np-tab-item active" data-tab="job-all">전체</div>
+        <div class="np-tab-item" data-tab="job-normal">일반일자리</div>
+        <div class="np-tab-item" data-tab="job-recommend">추천일자리</div>
+        <div class="np-tab-item" data-tab="job-public">공공일자리</div>
+        <div class="np-tab-item" data-tab="job-senior">시니어특화</div>
+      </div>
+      <div class="px-5 py-6">
+        <div id="job-all">
+          <p class="text-base font-semibold text-neutral-900 mb-1">전체 일자리 1,248건</p>
+          <p class="text-sm text-neutral-400">내 경력에 맞는 일자리를 찾아보세요</p>
+        </div>
+        <div id="job-normal" style="display:none">
+          <p class="text-base font-semibold text-neutral-900 mb-1">일반일자리 820건</p>
+          <p class="text-sm text-neutral-400">기업이 직접 등록한 채용 공고</p>
+        </div>
+        <div id="job-recommend" style="display:none">
+          <p class="text-base font-semibold text-neutral-900 mb-1">추천일자리 215건</p>
+          <p class="text-sm text-neutral-400">내 경력 기반 맞춤 추천</p>
+        </div>
+        <div id="job-public" style="display:none">
+          <p class="text-base font-semibold text-neutral-900 mb-1">공공일자리 113건</p>
+          <p class="text-sm text-neutral-400">정부·지자체 지원 일자리</p>
+        </div>
+        <div id="job-senior" style="display:none">
+          <p class="text-base font-semibold text-neutral-900 mb-1">시니어특화 100건</p>
+          <p class="text-sm text-neutral-400">50세 이상 우대 공고</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+(function () {
+  function initTabBar(barId) {
+    function onClick(e) {
+      var bar = document.getElementById(barId);
+      if (!bar) return;
+      var item = e.target.closest('[data-tab]');
+      if (!item || !bar.contains(item)) return;
+      bar.querySelectorAll('.np-tab-item').forEach(function (t) { t.classList.remove('active'); });
+      item.classList.add('active');
+      var tabId = item.dataset.tab;
+      var panel = item.closest('.rounded-card');
+      if (!panel) return;
+      panel.querySelectorAll('[id]').forEach(function (p) {
+        if (p.id && p.closest('[data-tab]') === null) p.style.display = 'none';
+      });
+      var target = document.getElementById(tabId);
+      if (target) target.style.display = 'block';
+    }
+    document.addEventListener('click', onClick);
+    return onClick;
+  }
+
+  var h1 = initTabBar('tab-apply-bar');
+  var h2 = initTabBar('tab-job-bar');
+
+  window._sectionCleanup = function () {
+    document.removeEventListener('click', h1);
+    document.removeEventListener('click', h2);
+  };
+})();
+</script>
