@@ -379,11 +379,22 @@
 
   /* ── Header ── */
   .np-header {
-    @apply w-full bg-neutral-0 border-b border-neutral-200
-           flex items-center h-16 px-6 gap-8;
+    @apply w-full bg-neutral-0 border-b border-neutral-200;
+  }
+  .np-header-inner {
+    @apply max-w-content mx-auto px-4 md:px-6
+           flex items-center h-14 md:h-16 gap-4 md:gap-8;
   }
   .np-header-nav {
-    @apply flex items-center gap-1 ml-auto;
+    @apply hidden md:flex items-center gap-1 ml-auto;
+  }
+  .np-header-actions {
+    @apply hidden md:flex items-center gap-2 ml-4;
+  }
+  .np-header-menu-btn {
+    @apply ml-auto flex md:hidden items-center justify-center
+           w-10 h-10 text-neutral-800 rounded-button cursor-pointer
+           hover:bg-neutral-50 transition-colors duration-[120ms] ease-out;
   }
   .np-nav-link {
     @apply px-3 py-2 text-lg text-neutral-500 font-medium rounded-button cursor-pointer
@@ -395,12 +406,11 @@
            hover:text-primary-500 hover:bg-primary-50
            transition-colors duration-[120ms] ease-out;
   }
-  .np-nav-link.active    { @apply text-primary-500 bg-primary-50; }
+  .np-nav-link.active     { @apply text-primary-500 bg-primary-50; }
   .np-nav-link-job.active { @apply text-primary-500 bg-primary-50; }
   .np-header-divider {
     @apply w-px h-4 bg-neutral-200 mx-1;
   }
-  .np-header-actions { @apply flex items-center gap-2 ml-4; }
 
   /* ── Top App Bar ── */
   .np-app-bar {
@@ -515,7 +525,10 @@
 
   /* ── Footer ── */
   .np-footer {
-    @apply w-full bg-neutral-0 border-t border-neutral-200 px-8 py-10;
+    @apply w-full bg-neutral-0 border-t border-neutral-200 px-4 md:px-8 py-8 md:py-10;
+  }
+  .np-footer-inner {
+    @apply max-w-content mx-auto flex flex-col gap-8 md:flex-row md:justify-between md:gap-12;
   }
   .np-footer-tagline {
     @apply text-lg font-bold text-neutral-900 mb-3;

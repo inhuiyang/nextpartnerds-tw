@@ -6,62 +6,82 @@
   <h2 class="text-xl font-bold text-neutral-900 mb-1">Header</h2>
   <p class="text-neutral-600 mb-6">로고 · 네비게이션 · 인증 버튼 영역</p>
 
-  <!-- Default -->
+  <!-- Desktop Default -->
   <section class="mb-6">
-    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-3">Default</h2>
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-3">Desktop — Default</h2>
     <div class="border border-neutral-200 rounded-card overflow-hidden">
       <header class="np-header">
-        <!-- 로고 -->
-        <a href="#" class="flex items-center gap-2 shrink-0">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-            <path d="M16 2L28.7 9.5V24.5L16 32L3.3 24.5V9.5L16 2Z" fill="#ff7f65"/>
-            <path d="M11 10h2.5l5 12H16l-1.2-3H10l-1.2 3H6.5L11 10Zm2.8 7-1.8-4.5L10.2 17h3.6Z" fill="white"/>
-          </svg>
-          <span class="text-xl font-bold text-neutral-900 tracking-tight">NextPartner</span>
-        </a>
-
-        <!-- 네비게이션 -->
-        <nav class="np-header-nav">
-          <a class="np-nav-link">서비스소개</a>
-          <div class="np-header-divider"></div>
-          <a class="np-nav-link-job">일반일자리</a>
-          <a class="np-nav-link-job">추천일자리</a>
-          <a class="np-nav-link-job">공공일자리</a>
-        </nav>
-
-        <!-- 인증 버튼 -->
-        <div class="np-header-actions">
-          <button class="np-btn np-btn-ghost np-btn-sm">로그인</button>
-          <button class="np-btn np-btn-primary np-btn-sm">회원가입</button>
+        <div class="np-header-inner">
+          <a href="#" class="flex items-center gap-2 shrink-0">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path d="M16 2L28.7 9.5V24.5L16 32L3.3 24.5V9.5L16 2Z" fill="#ff7f65"/>
+              <path d="M11 10h2.5l5 12H16l-1.2-3H10l-1.2 3H6.5L11 10Zm2.8 7-1.8-4.5L10.2 17h3.6Z" fill="white"/>
+            </svg>
+            <span class="text-xl font-bold text-neutral-900 tracking-tight">NextPartner</span>
+          </a>
+          <nav class="np-header-nav">
+            <a class="np-nav-link">서비스소개</a>
+            <div class="np-header-divider"></div>
+            <a class="np-nav-link-job">일반일자리</a>
+            <a class="np-nav-link-job">추천일자리</a>
+            <a class="np-nav-link-job">공공일자리</a>
+          </nav>
+          <div class="np-header-actions">
+            <button class="np-btn np-btn-ghost np-btn-sm">로그인</button>
+            <button class="np-btn np-btn-primary np-btn-sm">회원가입</button>
+          </div>
         </div>
       </header>
     </div>
   </section>
 
-  <!-- Active State -->
-  <section class="mb-10">
-    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-3">Active State — 일반일자리 선택</h2>
+  <!-- Desktop Active State -->
+  <section class="mb-6">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-3">Desktop — Active State (일반일자리 선택)</h2>
     <div class="border border-neutral-200 rounded-card overflow-hidden">
       <header class="np-header">
-        <a href="#" class="flex items-center gap-2 shrink-0">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-            <path d="M16 2L28.7 9.5V24.5L16 32L3.3 24.5V9.5L16 2Z" fill="#ff7f65"/>
-            <path d="M11 10h2.5l5 12H16l-1.2-3H10l-1.2 3H6.5L11 10Zm2.8 7-1.8-4.5L10.2 17h3.6Z" fill="white"/>
-          </svg>
-          <span class="text-xl font-bold text-neutral-900 tracking-tight">NextPartner</span>
-        </a>
+        <div class="np-header-inner">
+          <a href="#" class="flex items-center gap-2 shrink-0">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              <path d="M16 2L28.7 9.5V24.5L16 32L3.3 24.5V9.5L16 2Z" fill="#ff7f65"/>
+              <path d="M11 10h2.5l5 12H16l-1.2-3H10l-1.2 3H6.5L11 10Zm2.8 7-1.8-4.5L10.2 17h3.6Z" fill="white"/>
+            </svg>
+            <span class="text-xl font-bold text-neutral-900 tracking-tight">NextPartner</span>
+          </a>
+          <nav class="np-header-nav">
+            <a class="np-nav-link">서비스소개</a>
+            <div class="np-header-divider"></div>
+            <a class="np-nav-link-job active">일반일자리</a>
+            <a class="np-nav-link-job">추천일자리</a>
+            <a class="np-nav-link-job">공공일자리</a>
+          </nav>
+          <div class="np-header-actions">
+            <button class="np-btn np-btn-ghost np-btn-sm">로그인</button>
+            <button class="np-btn np-btn-primary np-btn-sm">회원가입</button>
+          </div>
+        </div>
+      </header>
+    </div>
+  </section>
 
-        <nav class="np-header-nav">
-          <a class="np-nav-link">서비스소개</a>
-          <div class="np-header-divider"></div>
-          <a class="np-nav-link-job active">일반일자리</a>
-          <a class="np-nav-link-job">추천일자리</a>
-          <a class="np-nav-link-job">공공일자리</a>
-        </nav>
-
-        <div class="np-header-actions">
-          <button class="np-btn np-btn-ghost np-btn-sm">로그인</button>
-          <button class="np-btn np-btn-primary np-btn-sm">회원가입</button>
+  <!-- Mobile -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-3">Mobile — 로고 + 햄버거</h2>
+    <div class="border border-neutral-200 rounded-card overflow-hidden" style="max-width:375px">
+      <header class="np-header">
+        <div class="px-4 flex items-center h-14 gap-4">
+          <a href="#" class="flex items-center gap-2 shrink-0">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+              <path d="M16 2L28.7 9.5V24.5L16 32L3.3 24.5V9.5L16 2Z" fill="#ff7f65"/>
+              <path d="M11 10h2.5l5 12H16l-1.2-3H10l-1.2 3H6.5L11 10Zm2.8 7-1.8-4.5L10.2 17h3.6Z" fill="white"/>
+            </svg>
+            <span class="text-lg font-bold text-neutral-900 tracking-tight">NextPartner</span>
+          </a>
+          <button class="ml-auto flex items-center justify-center w-10 h-10 text-neutral-800 rounded-button hover:bg-neutral-50">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
         </div>
       </header>
     </div>
@@ -72,26 +92,24 @@
   <h2 class="text-xl font-bold text-neutral-900 mb-1">Footer</h2>
   <p class="text-neutral-600 mb-6">회사 정보 · 법적 고지 · 지원 링크 영역</p>
 
-  <section class="mb-10">
-    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-3">Default</h2>
+  <!-- Desktop Footer -->
+  <section class="mb-6">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-3">Desktop</h2>
     <div class="border border-neutral-200 rounded-card overflow-hidden">
       <footer class="np-footer">
-        <div class="flex justify-between gap-12">
-
+        <div class="np-footer-inner">
           <!-- 왼쪽: 회사 정보 -->
           <div class="flex flex-col justify-between gap-8 flex-1">
             <div>
               <p class="np-footer-tagline">중장년층을 위한 일자리 매칭 플랫폼</p>
               <p class="np-footer-info">
-                주식 회사 모리아타운 &nbsp;|&nbsp; 대표: 권오형 &nbsp;|&nbsp; 사업자등록번호: 215-86-89431<br/>
+                주식회사 모리아타운 &nbsp;|&nbsp; 대표: 권오형 &nbsp;|&nbsp; 사업자등록번호: 215-86-89431<br/>
                 주소: 05854 서울특별시 송파구 법원로 114 (문정동) 비동 915호 &nbsp;|&nbsp; 전화:
                 <a href="tel:02-6713-7076" class="underline hover:text-neutral-900 transition-colors">02-6713-7076</a><br/>
                 직업정보제공사업 신고번호: 서울동부 제2026-11호
               </p>
               <p class="np-footer-info mt-3">© 2026 NextPartner. All rights reserved.</p>
             </div>
-
-            <!-- 로고 -->
             <div class="flex items-center gap-3">
               <svg width="40" height="40" viewBox="0 0 32 32" fill="none">
                 <path d="M16 2L28.7 9.5V24.5L16 32L3.3 24.5V9.5L16 2Z" fill="url(#logoGrad)"/>
@@ -110,8 +128,7 @@
               </div>
             </div>
           </div>
-
-          <!-- 오른쪽: Support 링크 -->
+          <!-- 오른쪽: Support -->
           <div class="shrink-0">
             <p class="np-footer-section-title">Support</p>
             <a class="np-footer-link">고객센터</a>
@@ -121,7 +138,37 @@
             <a class="np-footer-link">개인정보 처리방침</a>
             <a class="np-footer-link">위치기반서비스</a>
           </div>
+        </div>
+      </footer>
+    </div>
+  </section>
 
+  <!-- Mobile Footer -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-3">Mobile — 세로 스택</h2>
+    <div class="border border-neutral-200 rounded-card overflow-hidden" style="max-width:375px">
+      <footer class="np-footer">
+        <div class="flex flex-col gap-8">
+          <div>
+            <p class="np-footer-tagline">중장년층을 위한 일자리 매칭 플랫폼</p>
+            <p class="np-footer-info">
+              주식회사 모리아타운 &nbsp;|&nbsp; 대표: 권오형<br/>
+              사업자등록번호: 215-86-89431<br/>
+              전화: <a href="tel:02-6713-7076" class="underline">02-6713-7076</a>
+            </p>
+            <p class="np-footer-info mt-3">© 2026 NextPartner. All rights reserved.</p>
+          </div>
+          <div>
+            <p class="np-footer-section-title">Support</p>
+            <div class="grid grid-cols-2 gap-x-8">
+              <a class="np-footer-link">고객센터</a>
+              <a class="np-footer-link">회사소개</a>
+              <a class="np-footer-link">개인회원 이용약관</a>
+              <a class="np-footer-link">기업회원 이용약관</a>
+              <a class="np-footer-link">개인정보 처리방침</a>
+              <a class="np-footer-link">위치기반서비스</a>
+            </div>
+          </div>
         </div>
       </footer>
     </div>

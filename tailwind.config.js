@@ -69,6 +69,9 @@ module.exports = {
           'Apple SD Gothic Neo', 'sans-serif',
         ],
       },
+      maxWidth: {
+        content: '1212px',
+      },
     },
   },
   plugins: [],
