@@ -74,7 +74,7 @@ module.exports = {
       },
       backgroundImage: {
         'gradient-fluid':
-          'linear-gradient(135deg, #FFAA00 0%, #FF2D9E 28%, #7B4FA6 52%, #80BFFF 72%, #67E8D8 88%, #FFE680 100%)',
+          'linear-gradient(135deg, #FFAA00 0%, #FF2D9E 33%, #80BFFF 66%, #67E8D8 100%)',
       },
     },
   },

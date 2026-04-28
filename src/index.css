@@ -362,12 +362,16 @@
            font-base text-base font-semibold
            rounded-badge;
   }
-  .np-badge-primary { @apply bg-primary-500 text-neutral-0; }
-  .np-badge-neutral { @apply bg-neutral-200 text-neutral-800; }
-  .np-badge-success { @apply bg-success-100 text-success-500; }
-  .np-badge-warning { @apply bg-warning-100 text-warning-500; }
-  .np-badge-error   { @apply bg-error-100 text-error-500; }
-  .np-badge-info    { @apply bg-info-100 text-info-500; }
+  .np-badge-primary  { @apply bg-primary-500 text-neutral-0; }
+  .np-badge-neutral  { @apply bg-neutral-200 text-neutral-800; }
+  .np-badge-success  { @apply bg-success-100 text-success-500; }
+  .np-badge-warning  { @apply bg-warning-100 text-warning-500; }
+  .np-badge-error    { @apply bg-error-100 text-error-500; }
+  .np-badge-info     { @apply bg-info-100 text-info-500; }
+  .np-badge-gradient {
+    @apply text-neutral-0;
+    background: linear-gradient(135deg, #FFAA00 0%, #FF2D9E 33%, #80BFFF 66%, #67E8D8 100%);
+  }
 
   /* ── Divider ── */
   .np-divider {
@@ -532,12 +536,12 @@
     border: 2px solid transparent;
     background:
       linear-gradient(#fff, #fff) padding-box,
-      linear-gradient(135deg, #FFAA00 0%, #FF2D9E 28%, #7B4FA6 52%, #80BFFF 72%, #67E8D8 88%, #FFE680 100%) border-box;
+      linear-gradient(135deg, #FFAA00 0%, #FF2D9E 33%, #80BFFF 66%, #67E8D8 100%) border-box;
   }
   .np-job-card-badge {
     @apply inline-flex items-center px-3 py-1 rounded-pill
            text-sm font-bold text-neutral-0;
-    background: linear-gradient(90deg, #ff7f65, #a855f7);
+    background: linear-gradient(135deg, #FFAA00 0%, #FF2D9E 33%, #80BFFF 66%, #67E8D8 100%);
   }
   .np-job-card-urgency {
     @apply text-sm font-bold text-primary-500;
