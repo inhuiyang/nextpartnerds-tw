@@ -464,6 +464,28 @@
     @apply text-neutral-200 cursor-not-allowed pointer-events-none;
   }
 
+  /* ── Segmented Control ── */
+  .np-segmented {
+    @apply inline-flex bg-neutral-100 p-1 rounded-button gap-1;
+  }
+  .np-segmented-full {
+    @apply flex w-full bg-neutral-100 p-1 rounded-button gap-1;
+  }
+  .np-segmented-item {
+    @apply flex-1 flex items-center justify-center gap-2 px-4 py-2
+           text-base font-medium text-neutral-400
+           rounded-[6px] cursor-pointer select-none whitespace-nowrap
+           transition-all duration-[120ms] ease-out;
+  }
+  .np-segmented-item.active {
+    @apply bg-neutral-0 text-neutral-900 font-bold;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.10);
+  }
+  .np-segmented-item:not(.active):hover { @apply text-neutral-600; }
+  .np-segmented-item.disabled {
+    @apply text-neutral-200 cursor-not-allowed pointer-events-none;
+  }
+
   /* ── Footer ── */
   .np-footer {
     @apply w-full bg-neutral-0 border-t border-neutral-200 px-8 py-10;

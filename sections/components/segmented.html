@@ -1,0 +1,98 @@
+<div class="max-w-2xl">
+  <h1 class="text-2xl font-bold text-neutral-900 mb-1">Segmented Control</h1>
+  <p class="text-neutral-600 mb-8">하나의 옵션을 선택하는 그룹 컨트롤</p>
+
+  <!-- States -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">States</h2>
+    <div class="bg-neutral-0 border border-neutral-200 rounded-card p-6 flex flex-col gap-5">
+
+      <div>
+        <p class="text-base text-neutral-400 mb-3">2 Segments</p>
+        <div class="np-segmented">
+          <div class="np-segmented-item active">선택됨</div>
+          <div class="np-segmented-item">기본</div>
+        </div>
+      </div>
+
+      <div>
+        <p class="text-base text-neutral-400 mb-3">3 Segments</p>
+        <div class="np-segmented">
+          <div class="np-segmented-item active">선택됨</div>
+          <div class="np-segmented-item">기본</div>
+          <div class="np-segmented-item">기본</div>
+        </div>
+      </div>
+
+      <div>
+        <p class="text-base text-neutral-400 mb-3">Disabled</p>
+        <div class="np-segmented">
+          <div class="np-segmented-item active">선택됨</div>
+          <div class="np-segmented-item">기본</div>
+          <div class="np-segmented-item disabled">비활성</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Full Width -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">Full Width</h2>
+    <div class="bg-neutral-0 border border-neutral-200 rounded-card p-6 flex flex-col gap-5">
+
+      <div class="np-segmented-full" id="seg-gender">
+        <div class="np-segmented-item active" data-seg="gender">남성</div>
+        <div class="np-segmented-item" data-seg="gender">여성</div>
+      </div>
+
+      <div class="np-segmented-full" id="seg-career">
+        <div class="np-segmented-item active" data-seg="career">신입</div>
+        <div class="np-segmented-item" data-seg="career">경력</div>
+      </div>
+
+      <div class="np-segmented-full" id="seg-sort">
+        <div class="np-segmented-item active" data-seg="sort">최신순</div>
+        <div class="np-segmented-item" data-seg="sort">인기순</div>
+        <div class="np-segmented-item" data-seg="sort">마감순</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 실사용 예시 -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">실사용 예시 — 근무 형태 선택</h2>
+    <div class="bg-neutral-0 border border-neutral-200 rounded-card p-6">
+      <p class="text-base font-semibold text-neutral-900 mb-3">근무 형태</p>
+      <div class="np-segmented-full" id="seg-worktype">
+        <div class="np-segmented-item active" data-seg="worktype">전체</div>
+        <div class="np-segmented-item" data-seg="worktype">정규직</div>
+        <div class="np-segmented-item" data-seg="worktype">계약직</div>
+        <div class="np-segmented-item" data-seg="worktype">파트타임</div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+(function () {
+  function onClick(e) {
+    var item = e.target.closest('[data-seg]');
+    if (!item) return;
+    var group = item.closest('.np-segmented, .np-segmented-full');
+    if (!group) return;
+    group.querySelectorAll('.np-segmented-item').forEach(function (el) {
+      el.classList.remove('active');
+    });
+    item.classList.add('active');
+  }
+
+  document.addEventListener('click', onClick);
+
+  window._sectionCleanup = function () {
+    document.removeEventListener('click', onClick);
+  };
+})();
+</script>
