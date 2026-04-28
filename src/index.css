@@ -541,7 +541,7 @@
   .np-job-card-badge {
     @apply inline-flex items-center px-3 py-1 rounded-pill
            text-sm font-bold text-neutral-0;
-    background: linear-gradient(135deg, #FFAA00 0%, #FF2D9E 33%, #80BFFF 66%, #67E8D8 100%);
+    background: linear-gradient(135deg, #FFAA00 0%, #FF2D9E 33%);
   }
   .np-job-card-urgency {
     @apply text-sm font-bold text-primary-500;
@@ -550,7 +550,19 @@
     @apply text-sm font-semibold text-primary-500;
   }
   .np-job-card-title {
-    @apply text-xl font-bold text-neutral-900 leading-snug flex-1;
+    @apply text-xl font-bold text-neutral-900;
+    line-height: 1.375;
+    flex: 1;
+    min-width: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    overflow: hidden;
+    min-height: calc(1.375em * 2); /* 항상 2줄 높이 확보 */
+  }
+  .np-job-card-company {
+    @apply text-sm text-neutral-600;
   }
   .np-job-card-bookmark {
     @apply shrink-0 flex items-center justify-center w-8 h-8
