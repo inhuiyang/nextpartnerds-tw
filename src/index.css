@@ -377,4 +377,47 @@
     @apply w-full h-2 bg-neutral-100 border-none;
   }
 
+  /* ── Header ── */
+  .np-header {
+    @apply w-full bg-neutral-0 border-b border-neutral-200
+           flex items-center h-16 px-6 gap-8;
+  }
+  .np-header-nav {
+    @apply flex items-center gap-1 ml-auto;
+  }
+  .np-nav-link {
+    @apply px-3 py-2 text-lg text-neutral-500 font-medium rounded-button cursor-pointer
+           hover:text-neutral-900 hover:bg-neutral-50
+           transition-colors duration-[120ms] ease-out;
+  }
+  .np-nav-link-job {
+    @apply px-3 py-2 text-lg font-bold text-neutral-900 rounded-button cursor-pointer
+           hover:text-primary-500 hover:bg-primary-50
+           transition-colors duration-[120ms] ease-out;
+  }
+  .np-nav-link.active    { @apply text-primary-500 bg-primary-50; }
+  .np-nav-link-job.active { @apply text-primary-500 bg-primary-50; }
+  .np-header-divider {
+    @apply w-px h-4 bg-neutral-200 mx-1;
+  }
+  .np-header-actions { @apply flex items-center gap-2 ml-4; }
+
+  /* ── Footer ── */
+  .np-footer {
+    @apply w-full bg-neutral-0 border-t border-neutral-200 px-8 py-10;
+  }
+  .np-footer-tagline {
+    @apply text-lg font-bold text-neutral-900 mb-3;
+  }
+  .np-footer-info {
+    @apply text-sm text-neutral-500 leading-relaxed;
+  }
+  .np-footer-section-title {
+    @apply text-base font-bold text-neutral-900 mb-4;
+  }
+  .np-footer-link {
+    @apply text-base text-neutral-500 cursor-pointer block mb-3
+           hover:text-neutral-900 transition-colors duration-[120ms] ease-out;
+  }
+
 }

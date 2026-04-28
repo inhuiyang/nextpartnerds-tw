@@ -1,0 +1,130 @@
+<div class="max-w-4xl">
+  <h1 class="text-2xl font-bold text-neutral-900 mb-1">헤더 & 푸터 (Header & Footer)</h1>
+  <p class="text-neutral-600 mb-8">서비스 상단 헤더와 하단 푸터 레이아웃</p>
+
+  <!-- ── Header ── -->
+  <h2 class="text-xl font-bold text-neutral-900 mb-1">Header</h2>
+  <p class="text-neutral-600 mb-6">로고 · 네비게이션 · 인증 버튼 영역</p>
+
+  <!-- Default -->
+  <section class="mb-6">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-3">Default</h2>
+    <div class="border border-neutral-200 rounded-card overflow-hidden">
+      <header class="np-header">
+        <!-- 로고 -->
+        <a href="#" class="flex items-center gap-2 shrink-0">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M16 2L28.7 9.5V24.5L16 32L3.3 24.5V9.5L16 2Z" fill="#ff7f65"/>
+            <path d="M11 10h2.5l5 12H16l-1.2-3H10l-1.2 3H6.5L11 10Zm2.8 7-1.8-4.5L10.2 17h3.6Z" fill="white"/>
+          </svg>
+          <span class="text-xl font-bold text-neutral-900 tracking-tight">NextPartner</span>
+        </a>
+
+        <!-- 네비게이션 -->
+        <nav class="np-header-nav">
+          <a class="np-nav-link">서비스소개</a>
+          <div class="np-header-divider"></div>
+          <a class="np-nav-link-job">일반일자리</a>
+          <a class="np-nav-link-job">추천일자리</a>
+          <a class="np-nav-link-job">공공일자리</a>
+        </nav>
+
+        <!-- 인증 버튼 -->
+        <div class="np-header-actions">
+          <button class="np-btn np-btn-ghost np-btn-sm">로그인</button>
+          <button class="np-btn np-btn-primary np-btn-sm">회원가입</button>
+        </div>
+      </header>
+    </div>
+  </section>
+
+  <!-- Active State -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-3">Active State — 일반일자리 선택</h2>
+    <div class="border border-neutral-200 rounded-card overflow-hidden">
+      <header class="np-header">
+        <a href="#" class="flex items-center gap-2 shrink-0">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M16 2L28.7 9.5V24.5L16 32L3.3 24.5V9.5L16 2Z" fill="#ff7f65"/>
+            <path d="M11 10h2.5l5 12H16l-1.2-3H10l-1.2 3H6.5L11 10Zm2.8 7-1.8-4.5L10.2 17h3.6Z" fill="white"/>
+          </svg>
+          <span class="text-xl font-bold text-neutral-900 tracking-tight">NextPartner</span>
+        </a>
+
+        <nav class="np-header-nav">
+          <a class="np-nav-link">서비스소개</a>
+          <div class="np-header-divider"></div>
+          <a class="np-nav-link-job active">일반일자리</a>
+          <a class="np-nav-link-job">추천일자리</a>
+          <a class="np-nav-link-job">공공일자리</a>
+        </nav>
+
+        <div class="np-header-actions">
+          <button class="np-btn np-btn-ghost np-btn-sm">로그인</button>
+          <button class="np-btn np-btn-primary np-btn-sm">회원가입</button>
+        </div>
+      </header>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <div class="border-t border-neutral-200 my-10"></div>
+  <h2 class="text-xl font-bold text-neutral-900 mb-1">Footer</h2>
+  <p class="text-neutral-600 mb-6">회사 정보 · 법적 고지 · 지원 링크 영역</p>
+
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-3">Default</h2>
+    <div class="border border-neutral-200 rounded-card overflow-hidden">
+      <footer class="np-footer">
+        <div class="flex justify-between gap-12">
+
+          <!-- 왼쪽: 회사 정보 -->
+          <div class="flex flex-col justify-between gap-8 flex-1">
+            <div>
+              <p class="np-footer-tagline">중장년층을 위한 일자리 매칭 플랫폼</p>
+              <p class="np-footer-info">
+                주식 회사 모리아타운 &nbsp;|&nbsp; 대표: 권오형 &nbsp;|&nbsp; 사업자등록번호: 215-86-89431<br/>
+                주소: 05854 서울특별시 송파구 법원로 114 (문정동) 비동 915호 &nbsp;|&nbsp; 전화:
+                <a href="tel:02-6713-7076" class="underline hover:text-neutral-900 transition-colors">02-6713-7076</a><br/>
+                직업정보제공사업 신고번호: 서울동부 제2026-11호
+              </p>
+              <p class="np-footer-info mt-3">© 2026 NextPartner. All rights reserved.</p>
+            </div>
+
+            <!-- 로고 -->
+            <div class="flex items-center gap-3">
+              <svg width="40" height="40" viewBox="0 0 32 32" fill="none">
+                <path d="M16 2L28.7 9.5V24.5L16 32L3.3 24.5V9.5L16 2Z" fill="url(#logoGrad)"/>
+                <path d="M11 10h2.5l5 12H16l-1.2-3H10l-1.2 3H6.5L11 10Zm2.8 7-1.8-4.5L10.2 17h3.6Z" fill="white"/>
+                <defs>
+                  <linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#ff7f65"/>
+                    <stop offset="50%" stop-color="#4caf50"/>
+                    <stop offset="100%" stop-color="#2196f3"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div>
+                <p class="text-base font-bold text-neutral-900 leading-tight">NextPartner</p>
+                <p class="text-sm text-neutral-400 leading-tight">Senior Talent Marketplace</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 오른쪽: Support 링크 -->
+          <div class="shrink-0">
+            <p class="np-footer-section-title">Support</p>
+            <a class="np-footer-link">고객센터</a>
+            <a class="np-footer-link">회사소개</a>
+            <a class="np-footer-link">개인회원 이용약관</a>
+            <a class="np-footer-link">기업회원 이용약관</a>
+            <a class="np-footer-link">개인정보 처리방침</a>
+            <a class="np-footer-link">위치기반서비스</a>
+          </div>
+
+        </div>
+      </footer>
+    </div>
+  </section>
+
+</div>
