@@ -230,6 +230,49 @@
     @apply cursor-not-allowed;
   }
 
+  /* ── Switch ── */
+  .np-switch {
+    @apply inline-flex items-center gap-3 cursor-pointer select-none;
+  }
+  .np-switch-input {
+    @apply appearance-none relative shrink-0
+           rounded-pill bg-neutral-200 cursor-pointer
+           transition-colors duration-[200ms] ease-out;
+  }
+  .np-switch-input::after {
+    content: '';
+    position: absolute;
+    border-radius: 9999px;
+    background: white;
+    transition: transform 200ms ease-out;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+  }
+  .np-switch-input:checked {
+    @apply bg-primary-500;
+  }
+  .np-switch-input:focus-visible {
+    @apply outline-none shadow-[0_0_0_3px_rgba(255,184,159,0.35)];
+  }
+  .np-switch-input:disabled {
+    @apply opacity-40 cursor-not-allowed;
+  }
+  .np-switch:has(.np-switch-input:disabled) {
+    @apply cursor-not-allowed;
+  }
+  .np-switch-label {
+    @apply text-lg text-neutral-800;
+  }
+
+  /* Switch SM — 40×24 */
+  .np-switch-sm { width: 40px; height: 24px; }
+  .np-switch-sm::after { width: 18px; height: 18px; top: 3px; left: 3px; }
+  .np-switch-sm:checked::after { transform: translateX(16px); }
+
+  /* Switch MD — 52×30 */
+  .np-switch-md { width: 52px; height: 30px; }
+  .np-switch-md::after { width: 24px; height: 24px; top: 3px; left: 3px; }
+  .np-switch-md:checked::after { transform: translateX(22px); }
+
   /* ── Dropdown ── */
   details.np-dropdown { @apply relative inline-block; }
   details.np-dropdown > summary { list-style: none; }

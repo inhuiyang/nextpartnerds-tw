@@ -1,0 +1,148 @@
+<div class="max-w-2xl">
+  <h1 class="text-2xl font-bold text-neutral-900 mb-1">스위치 (Switch)</h1>
+  <p class="text-neutral-600 mb-8">온/오프 상태를 토글하는 스위치 컴포넌트</p>
+
+  <!-- Sizes -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">Sizes</h2>
+    <div class="bg-neutral-0 border border-neutral-200 rounded-card p-6 flex flex-col gap-6">
+
+      <div class="flex items-center gap-6">
+        <div class="w-24 text-base text-neutral-400">SM</div>
+        <label class="np-switch">
+          <input type="checkbox" class="np-switch-input np-switch-sm" />
+        </label>
+        <label class="np-switch">
+          <input type="checkbox" class="np-switch-input np-switch-sm" checked />
+        </label>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <div class="w-24 text-base text-neutral-400">MD</div>
+        <label class="np-switch">
+          <input type="checkbox" class="np-switch-input np-switch-md" />
+        </label>
+        <label class="np-switch">
+          <input type="checkbox" class="np-switch-input np-switch-md" checked />
+        </label>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- States -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">States</h2>
+    <div class="bg-neutral-0 border border-neutral-200 rounded-card p-6">
+
+      <div class="grid grid-cols-[100px_1fr_1fr_1fr_1fr] gap-4 items-center">
+        <div></div>
+        <div class="text-base text-neutral-400 text-center">Off</div>
+        <div class="text-base text-neutral-400 text-center">On</div>
+        <div class="text-base text-neutral-400 text-center">Disabled Off</div>
+        <div class="text-base text-neutral-400 text-center">Disabled On</div>
+
+        <div class="text-base text-neutral-400">SM</div>
+        <div class="flex justify-center">
+          <input type="checkbox" class="np-switch-input np-switch-sm" />
+        </div>
+        <div class="flex justify-center">
+          <input type="checkbox" class="np-switch-input np-switch-sm" checked />
+        </div>
+        <div class="flex justify-center">
+          <input type="checkbox" class="np-switch-input np-switch-sm" disabled />
+        </div>
+        <div class="flex justify-center">
+          <input type="checkbox" class="np-switch-input np-switch-sm" checked disabled />
+        </div>
+
+        <div class="text-base text-neutral-400">MD</div>
+        <div class="flex justify-center">
+          <input type="checkbox" class="np-switch-input np-switch-md" />
+        </div>
+        <div class="flex justify-center">
+          <input type="checkbox" class="np-switch-input np-switch-md" checked />
+        </div>
+        <div class="flex justify-center">
+          <input type="checkbox" class="np-switch-input np-switch-md" disabled />
+        </div>
+        <div class="flex justify-center">
+          <input type="checkbox" class="np-switch-input np-switch-md" checked disabled />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- With Label -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">With Label</h2>
+    <div class="bg-neutral-0 border border-neutral-200 rounded-card p-6 flex flex-col gap-4">
+
+      <label class="np-switch">
+        <input type="checkbox" class="np-switch-input np-switch-md" />
+        <span class="np-switch-label">알림 받기</span>
+      </label>
+
+      <label class="np-switch">
+        <input type="checkbox" class="np-switch-input np-switch-md" checked />
+        <span class="np-switch-label">마케팅 수신 동의</span>
+      </label>
+
+      <label class="np-switch">
+        <input type="checkbox" class="np-switch-input np-switch-md" disabled />
+        <span class="np-switch-label text-neutral-400">위치 정보 사용 (비활성)</span>
+      </label>
+
+    </div>
+  </section>
+
+  <!-- 실사용 예시 -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">실사용 예시 — 알림 설정</h2>
+    <div class="bg-neutral-0 border border-neutral-200 rounded-card overflow-hidden">
+
+      <div class="flex items-center justify-between px-5 py-4 border-b border-neutral-100">
+        <div>
+          <p class="text-lg font-semibold text-neutral-900">채용 알림</p>
+          <p class="text-base text-neutral-400 mt-0.5">새로운 채용 공고 알림</p>
+        </div>
+        <label class="np-switch">
+          <input type="checkbox" class="np-switch-input np-switch-md" checked />
+        </label>
+      </div>
+
+      <div class="flex items-center justify-between px-5 py-4 border-b border-neutral-100">
+        <div>
+          <p class="text-lg font-semibold text-neutral-900">지원 현황 알림</p>
+          <p class="text-base text-neutral-400 mt-0.5">서류 검토 · 면접 일정 변경 알림</p>
+        </div>
+        <label class="np-switch">
+          <input type="checkbox" class="np-switch-input np-switch-md" checked />
+        </label>
+      </div>
+
+      <div class="flex items-center justify-between px-5 py-4 border-b border-neutral-100">
+        <div>
+          <p class="text-lg font-semibold text-neutral-900">마케팅 정보 수신</p>
+          <p class="text-base text-neutral-400 mt-0.5">이벤트 · 혜택 정보</p>
+        </div>
+        <label class="np-switch">
+          <input type="checkbox" class="np-switch-input np-switch-md" />
+        </label>
+      </div>
+
+      <div class="flex items-center justify-between px-5 py-4">
+        <div>
+          <p class="text-lg font-semibold text-neutral-900">야간 알림</p>
+          <p class="text-base text-neutral-400 mt-0.5">오후 9시 이후 알림 (현재 비활성)</p>
+        </div>
+        <label class="np-switch">
+          <input type="checkbox" class="np-switch-input np-switch-md" disabled />
+        </label>
+      </div>
+
+    </div>
+  </section>
+
+</div>
