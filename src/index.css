@@ -131,6 +131,26 @@
   .np-textfield:disabled {
     @apply bg-neutral-50 text-neutral-400 cursor-not-allowed;
   }
+
+  /* ── Password Field (텍스트필드 + 표시/숨김 토글) ── */
+  .np-textfield-password-wrap {
+    @apply relative;
+  }
+  .np-textfield-password-wrap .np-textfield {
+    padding-right: 3.5rem;
+  }
+  .np-textfield-pw-toggle {
+    @apply absolute right-3 top-1/2 -translate-y-1/2
+           flex items-center justify-center w-8 h-8
+           text-neutral-400 rounded-button cursor-pointer
+           hover:text-neutral-700
+           transition-colors duration-[120ms] ease-out
+           bg-transparent border-none select-none;
+  }
+  .np-textfield-pw-toggle:focus-visible {
+    @apply outline-none shadow-[0_0_0_3px_rgba(255,184,159,0.35)];
+  }
+
   /* ── Date / Time Picker ── */
   .np-datepicker,
   .np-timepicker {
@@ -599,40 +619,33 @@
   .np-job-card-title {
     @apply text-xl font-bold text-neutral-900;
     line-height: 1.375;
-    flex: 1;
-    min-width: 0;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     line-clamp: 2;
     overflow: hidden;
-    min-height: calc(1.375em * 2); /* 항상 2줄 높이 확보 */
+    min-height: calc(1.375em * 2);
   }
   .np-job-card-company {
-    @apply text-sm text-neutral-600;
-  }
-  .np-job-card-bookmark {
-    @apply shrink-0 flex items-center justify-center w-8 h-8
-           text-neutral-300 rounded cursor-pointer
-           hover:text-neutral-600 transition-colors duration-[120ms] ease-out;
+    @apply text-sm text-neutral-400;
   }
   .np-job-card-meta {
-    @apply text-base text-neutral-600;
-  }
-  .np-job-card-hours {
-    @apply text-base text-neutral-600;
+    @apply text-sm text-neutral-600;
   }
   .np-job-card-pay {
-    @apply text-xl font-bold text-neutral-900;
+    @apply text-sm text-neutral-600;
   }
-  .np-job-card-pay-note {
-    @apply text-sm font-normal text-neutral-400 ml-1;
+  .np-job-card-register {
+    @apply text-sm text-neutral-400;
+  }
+  .np-job-card-reasons-box {
+    @apply bg-primary-50 rounded-card p-3;
   }
   .np-job-card-reasons {
     @apply flex flex-col gap-1;
   }
   .np-job-card-reason {
-    @apply text-base text-primary-500;
+    @apply text-sm text-primary-500;
   }
   .np-job-card-reason::before {
     content: '• ';
