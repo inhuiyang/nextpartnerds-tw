@@ -612,6 +612,42 @@
            hover:text-neutral-900 transition-colors duration-[120ms] ease-out;
   }
 
+  /* ── Pagination ── */
+  .np-pagination {
+    @apply flex items-center gap-1;
+  }
+  .np-page-btn {
+    @apply inline-flex items-center justify-center min-w-[40px] h-10 px-2
+           rounded-button text-base text-neutral-600
+           bg-neutral-0 border border-neutral-200 cursor-pointer
+           hover:bg-neutral-50 hover:text-neutral-900
+           transition-colors duration-[120ms] ease-out select-none;
+  }
+  .np-page-btn-active {
+    @apply bg-primary-500 text-neutral-0 border-primary-500 font-bold
+           hover:bg-primary-400 hover:text-neutral-0;
+  }
+  .np-page-btn-disabled {
+    @apply text-neutral-200 border-neutral-100 cursor-not-allowed
+           hover:bg-neutral-0 hover:text-neutral-200;
+  }
+
+  /* ── Loading ── */
+  .np-spinner {
+    @apply inline-block rounded-full border-2 border-neutral-200 animate-spin;
+    border-top-color: theme('colors.primary.500');
+  }
+  .np-spinner-sm  { @apply w-5 h-5 border-2; }
+  .np-spinner-md  { @apply w-8 h-8; border-width: 3px; }
+  .np-spinner-lg  { @apply w-12 h-12 border-4; }
+  .np-skeleton {
+    @apply bg-neutral-200 rounded animate-pulse;
+  }
+  .np-loading-overlay {
+    @apply fixed inset-0 flex items-center justify-center z-50;
+    background: rgba(26, 26, 26, 0.4);
+  }
+
 }
 
 @keyframes np-toast-in {
