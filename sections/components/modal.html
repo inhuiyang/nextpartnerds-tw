@@ -1,0 +1,209 @@
+<div class="max-w-2xl">
+  <h1 class="text-2xl font-bold text-neutral-900 mb-1">모달 (Modal)</h1>
+  <p class="text-neutral-600 mb-8">중요 정보 확인·입력을 위한 레이어 팝업</p>
+
+  <!-- 미리보기 버튼들 -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">Interactive Demo</h2>
+    <div class="bg-neutral-0 border border-neutral-200 rounded-card p-6 flex flex-wrap gap-3">
+      <button class="np-btn np-btn-primary np-btn-sm" data-modal="info">정보 모달</button>
+      <button class="np-btn np-btn-grey-stroke np-btn-sm" data-modal="confirm">확인 모달</button>
+      <button class="np-btn np-btn-grey-stroke np-btn-sm" data-modal="warning">경고 모달</button>
+      <button class="np-btn np-btn-grey-stroke np-btn-sm" data-modal="form">입력 모달</button>
+    </div>
+  </section>
+
+  <!-- Static Previews -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">정보 (Info)</h2>
+    <div class="bg-neutral-100 border border-neutral-200 rounded-card p-6 flex items-center justify-center" style="min-height:220px">
+      <div class="np-modal" style="position:relative">
+        <div class="np-modal-header">
+          <p class="np-modal-title">지원이 완료되었습니다</p>
+          <button class="np-modal-close" aria-label="닫기">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <div class="np-modal-body">
+          넥스트파트너 마케팅 팀장 포지션에 지원하셨습니다.<br/>결과는 이메일로 안내드립니다.
+        </div>
+        <div class="np-modal-footer">
+          <button class="np-btn np-btn-primary np-btn-md w-full">확인</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">확인 (Confirm)</h2>
+    <div class="bg-neutral-100 border border-neutral-200 rounded-card p-6 flex items-center justify-center" style="min-height:220px">
+      <div class="np-modal" style="position:relative">
+        <div class="np-modal-header">
+          <p class="np-modal-title">지원을 취소할까요?</p>
+          <button class="np-modal-close" aria-label="닫기">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <div class="np-modal-body">
+          취소 후에는 다시 지원하셔야 합니다.
+        </div>
+        <div class="np-modal-footer">
+          <button class="np-btn np-btn-grey-stroke np-btn-md flex-1">돌아가기</button>
+          <button class="np-btn np-btn-primary np-btn-md flex-1">지원 취소</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">경고 (Warning)</h2>
+    <div class="bg-neutral-100 border border-neutral-200 rounded-card p-6 flex items-center justify-center" style="min-height:220px">
+      <div class="np-modal" style="position:relative">
+        <div class="np-modal-header">
+          <p class="np-modal-title">이력서를 삭제할까요?</p>
+          <button class="np-modal-close" aria-label="닫기">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <div class="np-modal-body">
+          삭제된 이력서는 복구할 수 없습니다.<br/>정말 삭제하시겠습니까?
+        </div>
+        <div class="np-modal-footer">
+          <button class="np-btn np-btn-grey-stroke np-btn-md flex-1">취소</button>
+          <button class="np-btn np-btn-md flex-1 bg-error-500 text-neutral-0 hover:bg-error-500 border-error-500">삭제하기</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">입력 (Form)</h2>
+    <div class="bg-neutral-100 border border-neutral-200 rounded-card p-6 flex items-center justify-center" style="min-height:300px">
+      <div class="np-modal" style="position:relative">
+        <div class="np-modal-header">
+          <p class="np-modal-title">면접 일정 변경 요청</p>
+          <button class="np-modal-close" aria-label="닫기">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+        <div class="np-modal-body">
+          <div class="flex flex-col gap-4">
+            <div class="np-textfield-wrap">
+              <label class="np-textfield-label">희망 날짜</label>
+              <input type="date" class="np-datepicker" value="2026-05-28" />
+            </div>
+            <div class="np-textfield-wrap">
+              <label class="np-textfield-label">요청 사유</label>
+              <textarea class="np-textarea" style="min-height:88px" placeholder="변경 사유를 간략히 입력하세요"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="np-modal-footer">
+          <button class="np-btn np-btn-grey-stroke np-btn-md flex-1">취소</button>
+          <button class="np-btn np-btn-primary np-btn-md flex-1">변경 요청</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ── Modal Overlays (hidden) ── -->
+<div id="modal-info" class="np-modal-overlay" style="display:none">
+  <div class="np-modal">
+    <div class="np-modal-header">
+      <p class="np-modal-title">지원이 완료되었습니다</p>
+      <button class="np-modal-close np-modal-dismiss" aria-label="닫기">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="np-modal-body">넥스트파트너 마케팅 팀장 포지션에 지원하셨습니다.<br/>결과는 이메일로 안내드립니다.</div>
+    <div class="np-modal-footer">
+      <button class="np-btn np-btn-primary np-btn-md w-full np-modal-dismiss">확인</button>
+    </div>
+  </div>
+</div>
+
+<div id="modal-confirm" class="np-modal-overlay" style="display:none">
+  <div class="np-modal">
+    <div class="np-modal-header">
+      <p class="np-modal-title">지원을 취소할까요?</p>
+      <button class="np-modal-close np-modal-dismiss" aria-label="닫기">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="np-modal-body">취소 후에는 다시 지원하셔야 합니다.</div>
+    <div class="np-modal-footer">
+      <button class="np-btn np-btn-grey-stroke np-btn-md flex-1 np-modal-dismiss">돌아가기</button>
+      <button class="np-btn np-btn-primary np-btn-md flex-1 np-modal-dismiss">지원 취소</button>
+    </div>
+  </div>
+</div>
+
+<div id="modal-warning" class="np-modal-overlay" style="display:none">
+  <div class="np-modal">
+    <div class="np-modal-header">
+      <p class="np-modal-title">이력서를 삭제할까요?</p>
+      <button class="np-modal-close np-modal-dismiss" aria-label="닫기">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="np-modal-body">삭제된 이력서는 복구할 수 없습니다.<br/>정말 삭제하시겠습니까?</div>
+    <div class="np-modal-footer">
+      <button class="np-btn np-btn-grey-stroke np-btn-md flex-1 np-modal-dismiss">취소</button>
+      <button class="np-btn np-btn-md flex-1 np-modal-dismiss" style="background:#f44336;color:#fff;border-color:#f44336">삭제하기</button>
+    </div>
+  </div>
+</div>
+
+<div id="modal-form" class="np-modal-overlay" style="display:none">
+  <div class="np-modal">
+    <div class="np-modal-header">
+      <p class="np-modal-title">면접 일정 변경 요청</p>
+      <button class="np-modal-close np-modal-dismiss" aria-label="닫기">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="np-modal-body">
+      <div class="flex flex-col gap-4">
+        <div class="np-textfield-wrap">
+          <label class="np-textfield-label">희망 날짜</label>
+          <input type="date" class="np-datepicker" value="2026-05-28" />
+        </div>
+        <div class="np-textfield-wrap">
+          <label class="np-textfield-label">요청 사유</label>
+          <textarea class="np-textarea" style="min-height:88px" placeholder="변경 사유를 간략히 입력하세요"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="np-modal-footer">
+      <button class="np-btn np-btn-grey-stroke np-btn-md flex-1 np-modal-dismiss">취소</button>
+      <button class="np-btn np-btn-primary np-btn-md flex-1 np-modal-dismiss">변경 요청</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  function openModal(id) {
+    var el = document.getElementById('modal-' + id);
+    if (el) el.style.display = 'flex';
+  }
+  function closeAll() {
+    ['info','confirm','warning','form'].forEach(function(id) {
+      var el = document.getElementById('modal-' + id);
+      if (el) el.style.display = 'none';
+    });
+  }
+  function onClick(e) {
+    var trigger = e.target.closest('[data-modal]');
+    if (trigger) { openModal(trigger.dataset.modal); return; }
+    if (e.target.closest('.np-modal-dismiss')) { closeAll(); return; }
+    if (e.target.classList.contains('np-modal-overlay')) { closeAll(); }
+  }
+  document.addEventListener('click', onClick);
+  window._sectionCleanup = function () {
+    document.removeEventListener('click', onClick);
+  };
+})();
+</script>

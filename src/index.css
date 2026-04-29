@@ -131,6 +131,53 @@
   .np-textfield:disabled {
     @apply bg-neutral-50 text-neutral-400 cursor-not-allowed;
   }
+  /* ── Date / Time Picker ── */
+  .np-datepicker,
+  .np-timepicker {
+    @apply w-full h-14 px-4
+           font-base text-xl text-neutral-900
+           bg-neutral-0 border border-neutral-200 rounded-button
+           outline-none transition-all duration-[120ms] ease-out
+           cursor-pointer;
+  }
+  .np-datepicker:focus,
+  .np-timepicker:focus {
+    @apply border-primary-500 shadow-[0_0_0_3px_rgba(255,184,159,0.25)];
+  }
+  .np-datepicker-error,
+  .np-timepicker-error {
+    @apply border-error-500;
+  }
+  .np-datepicker-error:focus,
+  .np-timepicker-error:focus {
+    @apply shadow-[0_0_0_3px_rgba(244,67,54,0.15)];
+  }
+  .np-datepicker:disabled,
+  .np-timepicker:disabled {
+    @apply bg-neutral-50 text-neutral-400 cursor-not-allowed;
+  }
+
+  .np-textarea {
+    @apply w-full px-4 py-3
+           font-base text-xl text-neutral-900
+           bg-neutral-0 border border-neutral-200 rounded-button
+           outline-none transition-all duration-[120ms] ease-out
+           placeholder:text-neutral-400
+           resize-y leading-relaxed;
+    min-height: 120px;
+  }
+  .np-textarea:focus {
+    @apply border-primary-500 shadow-[0_0_0_3px_rgba(255,184,159,0.25)];
+  }
+  .np-textarea-error {
+    @apply border-error-500;
+  }
+  .np-textarea-error:focus {
+    @apply shadow-[0_0_0_3px_rgba(244,67,54,0.15)];
+  }
+  .np-textarea:disabled {
+    @apply bg-neutral-50 text-neutral-400 cursor-not-allowed resize-none;
+  }
 
   /* ── Input Stepper ── */
   .np-stepper {
@@ -610,6 +657,140 @@
   .np-footer-link {
     @apply text-base text-neutral-500 cursor-pointer block mb-3
            hover:text-neutral-900 transition-colors duration-[120ms] ease-out;
+  }
+
+  /* ── Help Panel ── */
+  .np-help-overlay {
+    @apply fixed inset-0 z-40 opacity-0 pointer-events-none
+           transition-opacity duration-300 ease-out;
+    background: rgba(26, 26, 26, 0.4);
+  }
+  .np-help-overlay.open {
+    @apply opacity-100 pointer-events-auto;
+  }
+  .np-help-panel {
+    @apply fixed top-0 right-0 h-full z-50 bg-neutral-0 flex flex-col;
+    width: 360px;
+    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.12);
+    transform: translateX(100%);
+    transition: transform 300ms ease-out;
+  }
+  .np-help-panel.open {
+    transform: translateX(0);
+  }
+  .np-help-panel-header {
+    @apply flex items-center justify-between px-6 py-5
+           border-b border-neutral-100 shrink-0;
+  }
+  .np-help-panel-title {
+    @apply text-xl font-bold text-neutral-900;
+  }
+  .np-help-panel-close {
+    @apply flex items-center justify-center w-10 h-10
+           text-neutral-400 rounded-button cursor-pointer
+           hover:bg-neutral-50 hover:text-neutral-800
+           transition-colors duration-[120ms] ease-out;
+  }
+  .np-help-panel-body {
+    @apply flex-1 overflow-y-auto px-6 py-5;
+  }
+  .np-help-section {
+    @apply mb-6;
+  }
+  .np-help-section-title {
+    @apply text-base font-bold text-neutral-900 mb-3 flex items-center gap-2;
+  }
+  .np-help-item {
+    @apply flex gap-3 pb-4 mb-4 border-b border-neutral-100 last:border-0 last:mb-0 last:pb-0;
+  }
+  .np-help-item-num {
+    @apply shrink-0 w-6 h-6 rounded-full bg-primary-100 text-primary-500
+           text-sm font-bold flex items-center justify-center;
+  }
+  .np-help-item-text {
+    @apply text-base text-neutral-700 leading-relaxed;
+  }
+  .np-help-faq-q {
+    @apply text-base font-semibold text-neutral-900 mb-1;
+  }
+  .np-help-faq-a {
+    @apply text-base text-neutral-600 leading-relaxed;
+  }
+  .np-help-panel-footer {
+    @apply px-6 py-4 border-t border-neutral-100 shrink-0;
+  }
+
+  /* ── Tooltip ── */
+  .np-tooltip-wrap {
+    @apply relative inline-flex items-center justify-center;
+  }
+  .np-tooltip {
+    @apply absolute z-20 px-3 py-2 text-sm font-medium text-neutral-0 leading-snug
+           bg-neutral-900 rounded-button whitespace-nowrap
+           pointer-events-none opacity-0
+           transition-opacity duration-150 ease-out;
+  }
+  .np-tooltip-wrap:hover .np-tooltip {
+    @apply opacity-100;
+  }
+  /* 위치 */
+  .np-tooltip-top    { @apply bottom-full left-1/2 -translate-x-1/2 mb-2; }
+  .np-tooltip-bottom { @apply top-full left-1/2 -translate-x-1/2 mt-2; }
+  .np-tooltip-left   { @apply right-full top-1/2 -translate-y-1/2 mr-2; }
+  .np-tooltip-right  { @apply left-full top-1/2 -translate-y-1/2 ml-2; }
+  /* 화살표 */
+  .np-tooltip-top::after {
+    content: '';
+    @apply absolute top-full left-1/2 -translate-x-1/2;
+    border: 5px solid transparent;
+    border-top-color: #1a1a1a;
+  }
+  .np-tooltip-bottom::after {
+    content: '';
+    @apply absolute bottom-full left-1/2 -translate-x-1/2;
+    border: 5px solid transparent;
+    border-bottom-color: #1a1a1a;
+  }
+  .np-tooltip-left::after {
+    content: '';
+    @apply absolute left-full top-1/2 -translate-y-1/2;
+    border: 5px solid transparent;
+    border-left-color: #1a1a1a;
+  }
+  .np-tooltip-right::after {
+    content: '';
+    @apply absolute right-full top-1/2 -translate-y-1/2;
+    border: 5px solid transparent;
+    border-right-color: #1a1a1a;
+  }
+
+  /* ── Modal ── */
+  .np-modal-overlay {
+    @apply fixed inset-0 flex items-center justify-center z-50 px-4;
+    background: rgba(26, 26, 26, 0.5);
+  }
+  .np-modal {
+    @apply bg-neutral-0 rounded-card w-full max-w-md
+           shadow-[0_8px_32px_rgba(0,0,0,0.18)]
+           flex flex-col;
+  }
+  .np-modal-header {
+    @apply flex items-center justify-between px-6 pt-6 pb-4;
+  }
+  .np-modal-title {
+    @apply text-xl font-bold text-neutral-900;
+  }
+  .np-modal-close {
+    @apply flex items-center justify-center w-10 h-10
+           text-neutral-400 rounded-button cursor-pointer
+           hover:bg-neutral-50 hover:text-neutral-800
+           transition-colors duration-[120ms] ease-out;
+  }
+  .np-modal-body {
+    @apply px-6 pb-4 text-lg text-neutral-600 leading-relaxed;
+  }
+  .np-modal-footer {
+    @apply flex gap-3 px-6 pb-6 pt-2;
   }
 
   /* ── Pagination ── */

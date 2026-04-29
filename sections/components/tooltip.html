@@ -1,0 +1,104 @@
+<div class="max-w-2xl">
+  <h1 class="text-2xl font-bold text-neutral-900 mb-1">툴팁 (Tooltip)</h1>
+  <p class="text-neutral-600 mb-8">요소에 호버 시 추가 설명을 표시하는 컴포넌트</p>
+
+  <!-- 위치 -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">Position</h2>
+    <div class="bg-neutral-0 border border-neutral-200 rounded-card p-10 flex flex-wrap items-center justify-center gap-10">
+
+      <!-- Top -->
+      <div class="np-tooltip-wrap">
+        <button class="np-btn np-btn-grey-stroke np-btn-sm">위 (Top)</button>
+        <div class="np-tooltip np-tooltip-top">위쪽에 표시됩니다</div>
+      </div>
+
+      <!-- Bottom -->
+      <div class="np-tooltip-wrap">
+        <button class="np-btn np-btn-grey-stroke np-btn-sm">아래 (Bottom)</button>
+        <div class="np-tooltip np-tooltip-bottom">아래쪽에 표시됩니다</div>
+      </div>
+
+      <!-- Left -->
+      <div class="np-tooltip-wrap">
+        <button class="np-btn np-btn-grey-stroke np-btn-sm">왼쪽 (Left)</button>
+        <div class="np-tooltip np-tooltip-left">왼쪽에 표시됩니다</div>
+      </div>
+
+      <!-- Right -->
+      <div class="np-tooltip-wrap">
+        <button class="np-btn np-btn-grey-stroke np-btn-sm">오른쪽 (Right)</button>
+        <div class="np-tooltip np-tooltip-right">오른쪽에 표시됩니다</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 실사용 예시 -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">실사용 예시</h2>
+    <div class="bg-neutral-0 border border-neutral-200 rounded-card p-6 flex flex-col gap-6">
+
+      <!-- 아이콘 버튼 + 툴팁 -->
+      <div class="flex items-center gap-3">
+        <span class="text-lg text-neutral-800">매칭률</span>
+        <div class="np-tooltip-wrap">
+          <button class="flex items-center justify-center w-6 h-6 rounded-full bg-neutral-200 text-neutral-600 text-sm font-bold cursor-pointer hover:bg-neutral-300 transition-colors" aria-label="매칭률 설명">?</button>
+          <div class="np-tooltip np-tooltip-top" style="white-space:normal;width:200px;text-align:center">내 경력·희망 조건과 공고의 일치도를 0~100%로 나타냅니다</div>
+        </div>
+        <span class="text-2xl font-bold text-primary-500">94%</span>
+      </div>
+
+      <!-- 저장 버튼 + 툴팁 -->
+      <div class="flex items-center gap-4">
+        <span class="text-lg text-neutral-800">카페 바리스타 보조</span>
+        <div class="np-tooltip-wrap">
+          <button class="flex items-center justify-center w-10 h-10 text-neutral-400 rounded-button hover:bg-neutral-50 hover:text-neutral-800 transition-colors" aria-label="저장">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
+            </svg>
+          </button>
+          <div class="np-tooltip np-tooltip-top">관심 공고 저장</div>
+        </div>
+      </div>
+
+      <!-- 비활성 버튼 + 툴팁 -->
+      <div class="flex items-center gap-4">
+        <div class="np-tooltip-wrap">
+          <button class="np-btn np-btn-primary np-btn-md" disabled style="opacity:0.4;cursor:not-allowed">지원하기</button>
+          <div class="np-tooltip np-tooltip-top">이력서를 먼저 등록해 주세요</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 미리보기 (항상 표시) -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">Static Preview (항상 표시)</h2>
+    <div class="bg-neutral-0 border border-neutral-200 rounded-card p-10 flex flex-wrap items-center justify-center gap-16">
+
+      <div class="np-tooltip-wrap">
+        <button class="np-btn np-btn-grey-stroke np-btn-sm">Top</button>
+        <div class="np-tooltip np-tooltip-top" style="opacity:1">위쪽 툴팁</div>
+      </div>
+
+      <div class="np-tooltip-wrap">
+        <button class="np-btn np-btn-grey-stroke np-btn-sm">Bottom</button>
+        <div class="np-tooltip np-tooltip-bottom" style="opacity:1">아래쪽 툴팁</div>
+      </div>
+
+      <div class="np-tooltip-wrap">
+        <button class="np-btn np-btn-grey-stroke np-btn-sm">Left</button>
+        <div class="np-tooltip np-tooltip-left" style="opacity:1">왼쪽 툴팁</div>
+      </div>
+
+      <div class="np-tooltip-wrap">
+        <button class="np-btn np-btn-grey-stroke np-btn-sm">Right</button>
+        <div class="np-tooltip np-tooltip-right" style="opacity:1">오른쪽 툴팁</div>
+      </div>
+
+    </div>
+  </section>
+
+</div>

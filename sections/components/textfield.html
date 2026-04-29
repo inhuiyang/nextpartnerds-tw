@@ -53,6 +53,51 @@
     </div>
   </section>
 
+  <!-- ── Textarea ── -->
+  <div class="border-t border-neutral-200 my-10"></div>
+  <h2 class="text-xl font-bold text-neutral-900 mb-1">텍스트 영역 (Textarea)</h2>
+  <p class="text-neutral-600 mb-8">여러 줄 입력 컴포넌트 — Default / Error / Disabled</p>
+
+  <!-- Default -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">Default</h2>
+    <div class="bg-neutral-0 border border-neutral-200 rounded-card p-6 flex flex-col gap-6">
+      <div class="np-textfield-wrap">
+        <label class="np-textfield-label">자기소개</label>
+        <textarea class="np-textarea" placeholder="간략한 자기소개를 입력하세요"></textarea>
+        <span class="np-textfield-hint">본인의 경력과 강점을 200자 이내로 작성하세요</span>
+      </div>
+      <div class="np-textfield-wrap">
+        <label class="np-textfield-label">지원 동기</label>
+        <textarea class="np-textarea" style="min-height:160px">넥스트파트너를 통해 제 경험을 살릴 수 있는 일자리를 찾고 싶습니다. 오랜 영업 경력을 바탕으로 팀에 기여하겠습니다.</textarea>
+      </div>
+    </div>
+  </section>
+
+  <!-- Error -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">Error</h2>
+    <div class="bg-neutral-0 border border-neutral-200 rounded-card p-6 flex flex-col gap-6">
+      <div class="np-textfield-wrap">
+        <label class="np-textfield-label">자기소개</label>
+        <textarea class="np-textarea np-textarea-error" placeholder="간략한 자기소개를 입력하세요"></textarea>
+        <span class="np-textfield-hint-error">자기소개는 최소 20자 이상 입력해 주세요</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Disabled -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">Disabled</h2>
+    <div class="bg-neutral-0 border border-neutral-200 rounded-card p-6 flex flex-col gap-6">
+      <div class="np-textfield-wrap">
+        <label class="np-textfield-label" style="opacity:0.4">담당자 메모</label>
+        <textarea class="np-textarea" disabled>이 항목은 담당자만 수정할 수 있습니다.</textarea>
+        <span class="np-textfield-hint">수정 권한이 없습니다</span>
+      </div>
+    </div>
+  </section>
+
   <!-- ── Input Stepper ── -->
   <div class="border-t border-neutral-200 my-10"></div>
   <h2 class="text-xl font-bold text-neutral-900 mb-1">입력 스테퍼 (Input Stepper)</h2>

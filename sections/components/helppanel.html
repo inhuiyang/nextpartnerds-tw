@@ -1,0 +1,234 @@
+<div class="max-w-2xl">
+  <h1 class="text-2xl font-bold text-neutral-900 mb-1">도움 패널 (Help Panel)</h1>
+  <p class="text-neutral-600 mb-8">화면 오른쪽에서 슬라이드 인되는 컨텍스트 도움말 패널</p>
+
+  <!-- Interactive Demo -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">Interactive Demo</h2>
+    <div class="bg-neutral-0 border border-neutral-200 rounded-card p-6 flex flex-wrap gap-3">
+      <button class="np-btn np-btn-primary np-btn-sm" data-help="guide">이용 안내 열기</button>
+      <button class="np-btn np-btn-grey-stroke np-btn-sm" data-help="faq">자주 묻는 질문 열기</button>
+      <button class="np-btn np-btn-grey-stroke np-btn-sm" data-help="contact">고객 지원 열기</button>
+    </div>
+  </section>
+
+  <!-- Static Preview -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">Static Preview — 이용 안내</h2>
+    <div class="border border-neutral-200 rounded-card overflow-hidden" style="max-width:360px">
+      <div class="np-help-panel-header">
+        <p class="np-help-panel-title">이용 안내</p>
+        <button class="np-help-panel-close" aria-label="닫기">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="np-help-panel-body" style="max-height:420px">
+        <div class="np-help-section">
+          <p class="np-help-section-title">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="text-primary-500"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+            지원 순서
+          </p>
+          <div class="np-help-item">
+            <span class="np-help-item-num">1</span>
+            <p class="np-help-item-text">이력서를 작성하고 저장하세요</p>
+          </div>
+          <div class="np-help-item">
+            <span class="np-help-item-num">2</span>
+            <p class="np-help-item-text">관심 있는 공고를 찾아 상세 내용을 확인하세요</p>
+          </div>
+          <div class="np-help-item">
+            <span class="np-help-item-num">3</span>
+            <p class="np-help-item-text">지원하기 버튼을 눌러 지원서를 제출하세요</p>
+          </div>
+          <div class="np-help-item">
+            <span class="np-help-item-num">4</span>
+            <p class="np-help-item-text">내 계정 &gt; 지원 현황에서 결과를 확인하세요</p>
+          </div>
+        </div>
+        <div class="np-help-section">
+          <p class="np-help-section-title">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="text-primary-500"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            안내 사항
+          </p>
+          <p class="text-base text-neutral-600 leading-relaxed">
+            이력서 미등록 시 지원이 제한될 수 있습니다.<br/>
+            지원 후 취소는 마감일 하루 전까지 가능합니다.
+          </p>
+        </div>
+      </div>
+      <div class="np-help-panel-footer">
+        <button class="np-btn np-btn-grey-stroke np-btn-sm w-full">고객센터 문의</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Static Preview — FAQ -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">Static Preview — 자주 묻는 질문</h2>
+    <div class="border border-neutral-200 rounded-card overflow-hidden" style="max-width:360px">
+      <div class="np-help-panel-header">
+        <p class="np-help-panel-title">자주 묻는 질문</p>
+        <button class="np-help-panel-close" aria-label="닫기">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="np-help-panel-body" style="max-height:420px">
+        <div class="np-help-section">
+          <div class="np-help-item">
+            <div class="flex-1">
+              <p class="np-help-faq-q">이력서는 몇 개까지 등록할 수 있나요?</p>
+              <p class="np-help-faq-a">최대 3개까지 등록할 수 있으며, 지원 시 원하는 이력서를 선택할 수 있습니다.</p>
+            </div>
+          </div>
+          <div class="np-help-item">
+            <div class="flex-1">
+              <p class="np-help-faq-q">지원 후 취소가 가능한가요?</p>
+              <p class="np-help-faq-a">마감일 하루 전까지 내 계정 &gt; 지원 현황에서 취소할 수 있습니다.</p>
+            </div>
+          </div>
+          <div class="np-help-item">
+            <div class="flex-1">
+              <p class="np-help-faq-q">매칭률은 어떻게 계산되나요?</p>
+              <p class="np-help-faq-a">내 경력, 희망 근무 조건, 거주 지역을 공고 조건과 비교하여 산출합니다.</p>
+            </div>
+          </div>
+          <div class="np-help-item">
+            <div class="flex-1">
+              <p class="np-help-faq-q">공공일자리는 누구나 지원 가능한가요?</p>
+              <p class="np-help-faq-a">만 60세 이상 또는 공고별 자격 요건을 충족하는 분이 지원 가능합니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="np-help-panel-footer">
+        <button class="np-btn np-btn-grey-stroke np-btn-sm w-full">더 많은 질문 보기</button>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ── Help Panel Overlays ── -->
+<div id="help-overlay" class="np-help-overlay"></div>
+
+<div id="help-guide" class="np-help-panel">
+  <div class="np-help-panel-header">
+    <p class="np-help-panel-title">이용 안내</p>
+    <button class="np-help-panel-close np-help-close" aria-label="닫기">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="np-help-panel-body">
+    <div class="np-help-section">
+      <p class="np-help-section-title">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="text-primary-500"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+        지원 순서
+      </p>
+      <div class="np-help-item"><span class="np-help-item-num">1</span><p class="np-help-item-text">이력서를 작성하고 저장하세요</p></div>
+      <div class="np-help-item"><span class="np-help-item-num">2</span><p class="np-help-item-text">관심 있는 공고를 찾아 상세 내용을 확인하세요</p></div>
+      <div class="np-help-item"><span class="np-help-item-num">3</span><p class="np-help-item-text">지원하기 버튼을 눌러 지원서를 제출하세요</p></div>
+      <div class="np-help-item"><span class="np-help-item-num">4</span><p class="np-help-item-text">내 계정 &gt; 지원 현황에서 결과를 확인하세요</p></div>
+    </div>
+    <div class="np-help-section">
+      <p class="np-help-section-title">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="text-primary-500"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        안내 사항
+      </p>
+      <p class="text-base text-neutral-600 leading-relaxed">이력서 미등록 시 지원이 제한될 수 있습니다.<br/>지원 후 취소는 마감일 하루 전까지 가능합니다.</p>
+    </div>
+  </div>
+  <div class="np-help-panel-footer">
+    <button class="np-btn np-btn-grey-stroke np-btn-sm w-full">고객센터 문의</button>
+  </div>
+</div>
+
+<div id="help-faq" class="np-help-panel">
+  <div class="np-help-panel-header">
+    <p class="np-help-panel-title">자주 묻는 질문</p>
+    <button class="np-help-panel-close np-help-close" aria-label="닫기">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="np-help-panel-body">
+    <div class="np-help-section">
+      <div class="np-help-item"><div class="flex-1"><p class="np-help-faq-q">이력서는 몇 개까지 등록할 수 있나요?</p><p class="np-help-faq-a">최대 3개까지 등록할 수 있으며, 지원 시 원하는 이력서를 선택할 수 있습니다.</p></div></div>
+      <div class="np-help-item"><div class="flex-1"><p class="np-help-faq-q">지원 후 취소가 가능한가요?</p><p class="np-help-faq-a">마감일 하루 전까지 내 계정 &gt; 지원 현황에서 취소할 수 있습니다.</p></div></div>
+      <div class="np-help-item"><div class="flex-1"><p class="np-help-faq-q">매칭률은 어떻게 계산되나요?</p><p class="np-help-faq-a">내 경력, 희망 근무 조건, 거주 지역을 공고 조건과 비교하여 산출합니다.</p></div></div>
+      <div class="np-help-item"><div class="flex-1"><p class="np-help-faq-q">공공일자리는 누구나 지원 가능한가요?</p><p class="np-help-faq-a">만 60세 이상 또는 공고별 자격 요건을 충족하는 분이 지원 가능합니다.</p></div></div>
+    </div>
+  </div>
+  <div class="np-help-panel-footer">
+    <button class="np-btn np-btn-grey-stroke np-btn-sm w-full">더 많은 질문 보기</button>
+  </div>
+</div>
+
+<div id="help-contact" class="np-help-panel">
+  <div class="np-help-panel-header">
+    <p class="np-help-panel-title">고객 지원</p>
+    <button class="np-help-panel-close np-help-close" aria-label="닫기">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="np-help-panel-body">
+    <div class="np-help-section">
+      <p class="np-help-section-title">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="text-primary-500"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        전화 문의
+      </p>
+      <p class="text-base text-neutral-600 leading-relaxed mb-1">02-6713-7076</p>
+      <p class="text-sm text-neutral-400">평일 09:00 ~ 18:00 (점심 12:00~13:00 제외)</p>
+    </div>
+    <div class="np-help-section">
+      <p class="np-help-section-title">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="text-primary-500"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        이메일 문의
+      </p>
+      <p class="text-base text-neutral-600 leading-relaxed mb-4">help@nextpartner.co.kr</p>
+      <button class="np-btn np-btn-primary np-btn-sm w-full">이메일 문의하기</button>
+    </div>
+    <div class="np-help-section">
+      <p class="np-help-section-title">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="text-primary-500"><path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        자주 묻는 질문
+      </p>
+      <button class="np-btn np-btn-grey-stroke np-btn-sm w-full np-help-close" data-help="faq">FAQ 보기</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var panels = ['guide', 'faq', 'contact'];
+
+  function openPanel(id) {
+    closeAll();
+    var overlay = document.getElementById('help-overlay');
+    var panel = document.getElementById('help-' + id);
+    if (!overlay || !panel) return;
+    overlay.classList.add('open');
+    panel.classList.add('open');
+  }
+
+  function closeAll() {
+    var overlay = document.getElementById('help-overlay');
+    if (overlay) overlay.classList.remove('open');
+    panels.forEach(function (id) {
+      var p = document.getElementById('help-' + id);
+      if (p) p.classList.remove('open');
+    });
+  }
+
+  function onClick(e) {
+    var trigger = e.target.closest('[data-help]');
+    if (trigger) { openPanel(trigger.dataset.help); return; }
+    if (e.target.closest('.np-help-close')) { closeAll(); return; }
+    if (e.target.id === 'help-overlay') { closeAll(); }
+  }
+
+  document.addEventListener('click', onClick);
+  window._sectionCleanup = function () {
+    document.removeEventListener('click', onClick);
+    closeAll();
+  };
+})();
+</script>
