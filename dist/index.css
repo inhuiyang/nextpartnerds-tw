@@ -3091,60 +3091,6 @@ details.np-dropdown[open] .np-dropdown-chevron {
   background-color: rgb(229 229 229 / var(--tw-bg-opacity, 1));
 }
 
-/* ── Progress ── */
-
-.np-progress-wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.np-progress-label {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: 600;
-  --tw-text-opacity: 1;
-  color: rgb(51 51 51 / var(--tw-text-opacity, 1));
-}
-
-.np-progress-track {
-  width: 100%;
-  overflow: hidden;
-  border-radius: 999px;
-  --tw-bg-opacity: 1;
-  background-color: rgb(240 240 240 / var(--tw-bg-opacity, 1));
-  height: 8px;
-}
-
-.np-progress-track-sm {
-  height: 4px;
-}
-
-.np-progress-track-lg {
-  height: 12px;
-}
-
-.np-progress-fill {
-  height: 100%;
-  border-radius: 999px;
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 127 101 / var(--tw-bg-opacity, 1));
-  transition: width 0.3s ease-out;
-}
-
-.np-progress-value {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: 700;
-  --tw-text-opacity: 1;
-  color: rgb(255 127 101 / var(--tw-text-opacity, 1));
-}
-
-.np-progress-indeterminate .np-progress-fill {
-  width: 40%;
-  animation: np-progress-slide 1.4s ease-in-out infinite;
-}
-
 /* ── Bottom Sheet ── */
 
 .np-bottom-sheet-overlay {
@@ -3219,108 +3165,6 @@ details.np-dropdown[open] .np-dropdown-chevron {
   padding-right: 20px;
   padding-top: 16px;
   padding-bottom: 16px;
-}
-
-/* ── Section Container ── */
-
-.np-section {
-  width: 100%;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
-@media (min-width: 768px) {
-  .np-section {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-}
-
-.np-section-inner {
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  max-width: 1212px;
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-@media (min-width: 768px) {
-  .np-section-inner {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .np-section-inner {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-}
-
-.np-section-header {
-  margin-bottom: 20px;
-}
-
-.np-section-title {
-  margin-bottom: 4px;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-weight: 700;
-  --tw-text-opacity: 1;
-  color: rgb(26 26 26 / var(--tw-text-opacity, 1));
-}
-
-.np-section-subtitle {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  --tw-text-opacity: 1;
-  color: rgb(102 102 102 / var(--tw-text-opacity, 1));
-}
-
-.np-section-card {
-  overflow: hidden;
-  border-radius: 8px;
-  border-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgb(229 229 229 / var(--tw-border-opacity, 1));
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
-.np-section-card-body {
-  padding: 16px;
-}
-
-.np-section-card-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgb(240 240 240 / var(--tw-border-opacity, 1));
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
-
-.np-section-card-title {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: 700;
-  --tw-text-opacity: 1;
-  color: rgb(26 26 26 / var(--tw-text-opacity, 1));
-}
-
-.np-section-card-action {
-  cursor: pointer;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: 600;
-  --tw-text-opacity: 1;
-  color: rgb(255 127 101 / var(--tw-text-opacity, 1));
 }
 
 .pointer-events-none {
@@ -3682,10 +3526,6 @@ details.np-dropdown[open] .np-dropdown-chevron {
 
 .justify-between {
   justify-content: space-between;
-}
-
-.gap-0 {
-  gap: 0px;
 }
 
 .gap-1 {
@@ -4185,11 +4025,6 @@ details.np-dropdown[open] .np-dropdown-chevron {
   color: rgb(255 127 101 / var(--tw-text-opacity, 1));
 }
 
-.text-success-500 {
-  --tw-text-opacity: 1;
-  color: rgb(76 175 80 / var(--tw-text-opacity, 1));
-}
-
 .underline {
   text-decoration-line: underline;
 }
@@ -4242,20 +4077,6 @@ details.np-dropdown[open] .np-dropdown-chevron {
 
 .ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-}
-
-@keyframes np-progress-slide {
-  0%   {
-    transform: translateX(-100%);
-  }
-
-  50%  {
-    transform: translateX(150%);
-  }
-
-  100% {
-    transform: translateX(150%);
-  }
 }
 
 @keyframes np-toast-in {

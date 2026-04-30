@@ -859,25 +859,6 @@
     background: rgba(26, 26, 26, 0.4);
   }
 
-  /* ── Progress ── */
-  .np-progress-wrap { @apply flex flex-col gap-2; }
-  .np-progress-label { @apply text-base font-semibold text-neutral-800; }
-  .np-progress-track {
-    @apply w-full bg-neutral-100 rounded-pill overflow-hidden;
-    height: 8px;
-  }
-  .np-progress-track-sm { height: 4px; }
-  .np-progress-track-lg { height: 12px; }
-  .np-progress-fill {
-    @apply bg-primary-500 h-full rounded-pill;
-    transition: width 0.3s ease-out;
-  }
-  .np-progress-value { @apply text-sm font-bold text-primary-500; }
-  .np-progress-indeterminate .np-progress-fill {
-    width: 40%;
-    animation: np-progress-slide 1.4s ease-in-out infinite;
-  }
-
   /* ── Bottom Sheet ── */
   .np-bottom-sheet-overlay {
     @apply absolute inset-0 z-40;
@@ -908,33 +889,6 @@
     @apply px-5 py-4 border-t border-neutral-100 shrink-0;
   }
 
-  /* ── Section Container ── */
-  .np-section {
-    @apply w-full py-8 md:py-10;
-  }
-  .np-section-inner {
-    @apply w-full max-w-content mx-auto px-4 md:px-6 lg:px-8;
-  }
-  .np-section-header { @apply mb-5; }
-  .np-section-title { @apply text-xl font-bold text-neutral-900 mb-1; }
-  .np-section-subtitle { @apply text-base text-neutral-600; }
-  .np-section-card {
-    @apply bg-neutral-0 rounded-card border border-neutral-200 overflow-hidden;
-  }
-  .np-section-card-body { @apply p-4; }
-  .np-section-card-header {
-    @apply flex items-center justify-between px-4 py-3
-           border-b border-neutral-100;
-  }
-  .np-section-card-title { @apply text-base font-bold text-neutral-900; }
-  .np-section-card-action { @apply text-sm font-semibold text-primary-500 cursor-pointer; }
-
-}
-
-@keyframes np-progress-slide {
-  0%   { transform: translateX(-100%); }
-  50%  { transform: translateX(150%); }
-  100% { transform: translateX(150%); }
 }
 
 @keyframes np-toast-in {
