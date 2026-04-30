@@ -74,6 +74,71 @@
     </div>
   </section>
 
+  <!-- Mobile Pagination -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">모바일 (Mobile)</h2>
+    <div class="flex flex-col gap-4 max-w-sm">
+
+      <!-- 첫 번째 페이지 -->
+      <div class="bg-neutral-0 border border-neutral-200 rounded-card px-4 py-3">
+        <nav class="np-pagination-mobile" aria-label="페이지 이동">
+          <button class="np-pagination-mobile-btn" disabled aria-label="이전 페이지">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+            </svg>
+            이전
+          </button>
+          <span class="np-pagination-mobile-indicator" aria-live="polite">1 / 5</span>
+          <button class="np-pagination-mobile-btn" aria-label="다음 페이지">
+            다음
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </nav>
+      </div>
+
+      <!-- 중간 페이지 -->
+      <div class="bg-neutral-0 border border-neutral-200 rounded-card px-4 py-3">
+        <nav class="np-pagination-mobile" aria-label="페이지 이동">
+          <button class="np-pagination-mobile-btn" aria-label="이전 페이지">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+            </svg>
+            이전
+          </button>
+          <span class="np-pagination-mobile-indicator" aria-live="polite">3 / 5</span>
+          <button class="np-pagination-mobile-btn" aria-label="다음 페이지">
+            다음
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </nav>
+      </div>
+
+      <!-- 마지막 페이지 -->
+      <div class="bg-neutral-0 border border-neutral-200 rounded-card px-4 py-3">
+        <nav class="np-pagination-mobile" aria-label="페이지 이동">
+          <button class="np-pagination-mobile-btn" aria-label="이전 페이지">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
+            </svg>
+            이전
+          </button>
+          <span class="np-pagination-mobile-indicator" aria-live="polite">5 / 5</span>
+          <button class="np-pagination-mobile-btn" disabled aria-label="다음 페이지">
+            다음
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </nav>
+      </div>
+
+    </div>
+  </section>
+
   <!-- Many Pages with Ellipsis -->
   <section class="mb-10">
     <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">많은 페이지 (말줄임)</h2>

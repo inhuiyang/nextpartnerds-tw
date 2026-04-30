@@ -630,10 +630,10 @@
     @apply text-sm text-neutral-400;
   }
   .np-job-card-meta {
-    @apply text-sm text-neutral-600;
+    @apply text-base text-neutral-600;
   }
   .np-job-card-pay {
-    @apply text-sm text-neutral-600;
+    @apply text-base text-neutral-600;
   }
   .np-job-card-register {
     @apply text-sm text-neutral-400;
@@ -645,7 +645,7 @@
     @apply flex flex-col gap-1;
   }
   .np-job-card-reason {
-    @apply text-sm text-primary-500;
+    @apply text-base text-primary-500;
   }
   .np-job-card-reason::before {
     content: '• ';
@@ -811,7 +811,7 @@
     @apply flex items-center gap-1;
   }
   .np-page-btn {
-    @apply inline-flex items-center justify-center min-w-[40px] h-10 px-2
+    @apply inline-flex items-center justify-center shrink-0 min-w-[40px] h-10 px-2
            rounded-button text-base text-neutral-600
            bg-neutral-0 border border-neutral-200 cursor-pointer
            hover:bg-neutral-50 hover:text-neutral-900
@@ -822,8 +822,25 @@
            hover:bg-primary-400 hover:text-neutral-0;
   }
   .np-page-btn-disabled {
-    @apply text-neutral-200 border-neutral-100 cursor-not-allowed
-           hover:bg-neutral-0 hover:text-neutral-200;
+    @apply opacity-30 cursor-not-allowed pointer-events-none;
+  }
+
+  /* ── Pagination Mobile ── */
+  .np-pagination-mobile {
+    @apply flex items-center justify-between w-full;
+  }
+  .np-pagination-mobile-btn {
+    @apply inline-flex items-center gap-1
+           text-base font-semibold text-primary-500
+           bg-transparent border-none cursor-pointer select-none
+           transition-colors duration-[120ms] ease-out
+           hover:text-primary-400 active:text-primary-300;
+  }
+  .np-pagination-mobile-btn:disabled {
+    @apply text-neutral-200 cursor-not-allowed pointer-events-none;
+  }
+  .np-pagination-mobile-indicator {
+    @apply text-base font-semibold text-neutral-800;
   }
 
   /* ── Loading ── */
