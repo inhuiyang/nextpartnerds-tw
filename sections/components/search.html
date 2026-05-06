@@ -13,7 +13,7 @@
       <div>
         <p class="text-base text-neutral-400 mb-2">Default</p>
         <div class="np-search">
-          <svg class="np-search-icon w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg>
+          <i data-lucide="search" class="np-search-icon w-6 h-6"></i>
           <input type="text" class="np-search-input" placeholder="직무, 회사명으로 검색" />
         </div>
       </div>
@@ -21,10 +21,10 @@
       <div>
         <p class="text-base text-neutral-400 mb-2">With Value</p>
         <div class="np-search">
-          <svg class="np-search-icon w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg>
+          <i data-lucide="search" class="np-search-icon w-6 h-6"></i>
           <input type="text" class="np-search-input" value="마케팅 팀장" id="sf-value" />
           <button id="sf-clear-btn" class="np-search-clear">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+            <i data-lucide="x" class="w-5 h-5"></i>
           </button>
         </div>
       </div>
@@ -32,7 +32,7 @@
       <div>
         <p class="text-base text-neutral-400 mb-2">Disabled</p>
         <div class="np-search opacity-60 pointer-events-none">
-          <svg class="np-search-icon w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg>
+          <i data-lucide="search" class="np-search-icon w-6 h-6"></i>
           <input type="text" class="np-search-input" placeholder="검색을 사용할 수 없습니다" disabled />
         </div>
       </div>
@@ -52,10 +52,10 @@
       <div class="relative" id="sv-root">
 
         <div class="np-search">
-          <svg class="np-search-icon w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg>
+          <i data-lucide="search" class="np-search-icon w-6 h-6"></i>
           <input type="text" id="sv-input" class="np-search-input" placeholder="직무, 회사명으로 검색" autocomplete="off" />
           <button id="sv-clear" class="np-search-clear" style="display:none">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+            <i data-lucide="x" class="w-5 h-5"></i>
           </button>
         </div>
 
@@ -64,15 +64,15 @@
           <div id="sv-recent">
             <p class="np-search-section-label">최근 검색어</p>
             <div class="np-search-item" data-kw="마케팅 팀장">
-              <svg class="w-5 h-5 text-neutral-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <i data-lucide="clock" class="w-5 h-5 text-neutral-400 shrink-0"></i>
               <span class="flex-1">마케팅 팀장</span>
             </div>
             <div class="np-search-item" data-kw="넥스트파트너">
-              <svg class="w-5 h-5 text-neutral-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <i data-lucide="clock" class="w-5 h-5 text-neutral-400 shrink-0"></i>
               <span class="flex-1">넥스트파트너</span>
             </div>
             <div class="np-search-item" data-kw="IT 개발 시니어">
-              <svg class="w-5 h-5 text-neutral-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <i data-lucide="clock" class="w-5 h-5 text-neutral-400 shrink-0"></i>
               <span class="flex-1">IT 개발 시니어</span>
             </div>
           </div>
@@ -86,7 +86,7 @@
           </div>
 
           <div id="sv-empty" style="display:none" class="py-10 flex flex-col items-center gap-2">
-            <svg class="w-10 h-10 text-neutral-200" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg>
+            <i data-lucide="search" class="w-10 h-10 text-neutral-200"></i>
             <p class="text-lg font-semibold text-neutral-800">검색 결과가 없습니다</p>
             <p class="text-base text-neutral-400">다른 키워드로 다시 검색해보세요</p>
           </div>
@@ -154,7 +154,7 @@
       sList.innerHTML = matches.map(function(k) {
         var h = k.label.replace(q, '<span class="np-search-item-keyword">' + q + '</span>');
         return '<div class="np-search-item" data-kw="' + k.label + '">'
-          + '<svg class="w-5 h-5 text-neutral-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg>'
+          + '<i data-lucide="search" class="w-5 h-5 text-neutral-400 shrink-0"></i>'
           + '<span>' + h + '</span></div>';
       }).join('');
     }
@@ -164,11 +164,12 @@
         ? companies.map(function(k) {
             var h = k.company.replace(q, '<span class="np-search-item-keyword">' + q + '</span>');
             return '<div class="np-search-item" data-kw="' + k.company + '">'
-              + '<svg class="w-5 h-5 text-neutral-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>'
+              + '<i data-lucide="building-2" class="w-5 h-5 text-neutral-400 shrink-0"></i>'
               + '<span>' + h + '</span></div>';
           }).join('')
         : '<p class="text-base text-neutral-400 px-4 py-3">관련 회사 없음</p>';
     }
+    if (window.lucide) lucide.createIcons({ nameAttr: 'data-lucide' });
   }
 
   function hideDrop() {

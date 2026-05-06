@@ -20,6 +20,7 @@
 | 빌드 | `build.js` (Node.js, fetch loader) | Vite + Tailwind CLI |
 | 구조 | `sections/` 분리 HTML + `loader.js` | 동일 구조 유지 |
 | 폰트 | Pretendard Variable (CDN) | 동일 |
+| 아이콘 | 인라인 SVG (혼용) | **Lucide Icons** |
 
 
 ---
@@ -124,6 +125,39 @@ borderRadius: {
 width:  { 'icon-sm': '24px', 'icon-md': '32px', 'icon-lg': '36px' }
 height: { 'icon-sm': '24px', 'icon-md': '32px', 'icon-lg': '36px' }
 ```
+
+### 아이콘 사용 규칙 — Lucide Icons
+
+모든 아이콘은 **[Lucide](https://lucide.dev)** 를 사용한다.
+
+#### 로드 방식 (CDN)
+
+`index.html` `<head>`에 스크립트 추가:
+
+```html
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+```
+
+`</body>` 직전에 초기화 호출:
+
+```html
+<script>lucide.createIcons();</script>
+```
+
+#### 사용법
+
+```html
+<!-- data-lucide 속성으로 아이콘 이름 지정 -->
+<i data-lucide="search" class="w-icon-sm h-icon-sm"></i>
+<i data-lucide="chevron-right" class="w-icon-sm h-icon-sm text-neutral-400"></i>
+```
+
+#### 규칙
+
+- 아이콘 이름은 Lucide 공식 이름 사용 (kebab-case, 예: `arrow-left`, `map-pin`)
+- 크기는 반드시 `w-icon-sm`(24px) / `w-icon-md`(32px) / `w-icon-lg`(36px) 토큰 사용
+- 색상은 `text-*` 유틸리티로 제어 (`currentColor` 상속)
+- 인라인 SVG 직접 삽입 금지 — 유지보수성을 위해 `data-lucide` 방식 통일
 
 ### Font Family (`theme.extend.fontFamily`)
 

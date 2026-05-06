@@ -3333,6 +3333,10 @@ details.np-dropdown[open] .np-dropdown-chevron {
   height: 32px;
 }
 
+.h-\[18px\] {
+  height: 18px;
+}
+
 .h-full {
   height: 100%;
 }
@@ -3415,6 +3419,10 @@ details.np-dropdown[open] .np-dropdown-chevron {
 
 .w-8 {
   width: 32px;
+}
+
+.w-\[18px\] {
+  width: 18px;
 }
 
 .w-\[220px\] {
@@ -4023,6 +4031,16 @@ details.np-dropdown[open] .np-dropdown-chevron {
 .text-primary-500 {
   --tw-text-opacity: 1;
   color: rgb(255 127 101 / var(--tw-text-opacity, 1));
+}
+
+.text-success-500 {
+  --tw-text-opacity: 1;
+  color: rgb(76 175 80 / var(--tw-text-opacity, 1));
+}
+
+.text-warning-500 {
+  --tw-text-opacity: 1;
+  color: rgb(255 152 0 / var(--tw-text-opacity, 1));
 }
 
 .underline {

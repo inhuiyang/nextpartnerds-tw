@@ -11,7 +11,7 @@
       <div>
         <p class="text-xs text-neutral-400 mb-2">Default</p>
         <div class="np-toast">
-          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" style="stroke:#999999;stroke-width:2;flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <i data-lucide="info" class="w-5 h-5 shrink-0 text-neutral-400"></i>
           <span>저장되었습니다</span>
         </div>
       </div>
@@ -20,7 +20,7 @@
       <div>
         <p class="text-xs text-neutral-400 mb-2">Info</p>
         <div class="np-toast">
-          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" style="stroke:#2196f3;stroke-width:2.5;flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <i data-lucide="info" class="w-5 h-5 shrink-0 text-info-500"></i>
           <span>새로운 공고 3건이 등록되었습니다</span>
         </div>
       </div>
@@ -29,7 +29,7 @@
       <div>
         <p class="text-xs text-neutral-400 mb-2">Success</p>
         <div class="np-toast">
-          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" style="stroke:#4caf50;stroke-width:2.5;flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <i data-lucide="circle-check" class="w-5 h-5 shrink-0 text-success-500"></i>
           <span>지원이 완료되었습니다</span>
         </div>
       </div>
@@ -38,7 +38,7 @@
       <div>
         <p class="text-xs text-neutral-400 mb-2">Warning</p>
         <div class="np-toast">
-          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" style="stroke:#ff9800;stroke-width:2.5;flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+          <i data-lucide="triangle-alert" class="w-5 h-5 shrink-0 text-warning-500"></i>
           <span>이력서를 먼저 등록해주세요</span>
         </div>
       </div>
@@ -47,9 +47,7 @@
       <div>
         <p class="text-xs text-neutral-400 mb-2">Error</p>
         <div class="np-toast">
-          <svg width="20" height="20" viewBox="0 0 24 24" style="fill:none;stroke:#f44336;stroke-width:2.5;flex-shrink:0">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
-          </svg>
+          <i data-lucide="x" class="w-5 h-5 shrink-0 text-error-500"></i>
           <span>오류가 발생했습니다. 다시 시도해주세요</span>
         </div>
       </div>
@@ -66,7 +64,7 @@
       <div>
         <p class="text-xs text-neutral-400 mb-2">With Action</p>
         <div class="np-toast">
-          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" style="stroke:#4caf50;stroke-width:2.5;flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <i data-lucide="circle-check" class="w-5 h-5 shrink-0 text-success-500"></i>
           <span>스크랩에 추가되었습니다</span>
           <span class="np-toast-action">보기</span>
         </div>
@@ -76,10 +74,10 @@
       <div>
         <p class="text-xs text-neutral-400 mb-2">With Close</p>
         <div class="np-toast">
-          <svg width="20" height="20" fill="none" viewBox="0 0 24 24" style="stroke:#2196f3;stroke-width:2.5;flex-shrink:0"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <i data-lucide="info" class="w-5 h-5 shrink-0 text-info-500"></i>
           <span>알림이 설정되었습니다</span>
           <button class="np-toast-close">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+            <i data-lucide="x" class="w-4 h-4"></i>
           </button>
         </div>
       </div>
@@ -107,11 +105,11 @@
 <script>
 (function () {
   var TOASTS = {
-    default: { stroke: '#999999', icon: 'M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z', msg: '저장되었습니다' },
-    info:    { stroke: '#2196f3', icon: 'M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z', msg: '새로운 공고 3건이 등록되었습니다' },
-    success: { stroke: '#4caf50', icon: 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z', msg: '지원이 완료되었습니다' },
-    warning: { stroke: '#ff9800', icon: 'M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z', msg: '이력서를 먼저 등록해주세요' },
-    error:   { stroke: '#f44336', icon: 'M6 18L18 6M6 6l12 12', msg: '오류가 발생했습니다. 다시 시도해주세요' },
+    default: { lucide: 'info',          cls: 'text-neutral-400', msg: '저장되었습니다' },
+    info:    { lucide: 'info',          cls: 'text-info-500',    msg: '새로운 공고 3건이 등록되었습니다' },
+    success: { lucide: 'circle-check',  cls: 'text-success-500', msg: '지원이 완료되었습니다' },
+    warning: { lucide: 'triangle-alert',cls: 'text-warning-500', msg: '이력서를 먼저 등록해주세요' },
+    error:   { lucide: 'x',             cls: 'text-error-500',   msg: '오류가 발생했습니다. 다시 시도해주세요' },
   };
 
   var wrap = document.createElement('div');
@@ -126,17 +124,11 @@
     el.className = 'np-toast';
     el.style.animation = 'np-toast-in 200ms ease-out';
 
-    var svgNS = 'http://www.w3.org/2000/svg';
-    var svg = document.createElementNS(svgNS, 'svg');
-    svg.setAttribute('width', '20'); svg.setAttribute('height', '20');
-    svg.setAttribute('fill', 'none'); svg.setAttribute('viewBox', '0 0 24 24');
-    svg.style.cssText = 'fill:none;stroke:' + cfg.stroke + ';stroke-width:2.5;flex-shrink:0';
-    var path = document.createElementNS(svgNS, 'path');
-    path.setAttribute('stroke-linecap', 'round');
-    path.setAttribute('stroke-linejoin', 'round');
-    path.setAttribute('d', cfg.icon);
-    svg.appendChild(path);
-    el.appendChild(svg);
+    var icon = document.createElement('i');
+    icon.setAttribute('data-lucide', cfg.lucide);
+    icon.className = 'w-5 h-5 shrink-0 ' + cfg.cls;
+    el.appendChild(icon);
+    if (window.lucide) lucide.createIcons({ nameAttr: 'data-lucide', nodes: [icon] });
 
     var span = document.createElement('span');
     span.textContent = cfg.msg;

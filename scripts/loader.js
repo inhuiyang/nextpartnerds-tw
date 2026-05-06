@@ -13,6 +13,7 @@ async function loadSection(section) {
     }
 
     container.innerHTML = await res.text();
+    if (window.lucide) lucide.createIcons({ nameAttr: 'data-lucide' });
     container.querySelectorAll('script').forEach(orig => {
       const script = document.createElement('script');
       script.textContent = orig.textContent;
