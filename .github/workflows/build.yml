@@ -1,0 +1,50 @@
+name: Build Design System
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'sections/**'
+      - 'src/**'
+      - 'tailwind.config.js'
+      - 'build-standalone.js'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # 봇이 커밋한 경우 무한 루프 방지
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Tailwind CSS
+        run: npx tailwindcss -i ./src/index.css -o ./dist/index.css --minify
+
+      - name: Build standalone.html
+        run: node build-standalone.js
+
+      - name: Build figma-export.html
+        run: node build-standalone.js --figma
+
+      - name: Commit generated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add dist/index.css standalone.html figma-export.html
+          git diff --cached --quiet && echo "변경 없음, 스킵" || \
+            git commit -m "chore: auto-rebuild design system [skip ci]"
+
+      - name: Push
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: master
