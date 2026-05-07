@@ -1,7 +1,9 @@
 /**
  * build-standalone.js
  * 모든 섹션 HTML + dist/index.css 를 하나의 standalone.html 로 번들링
- * Usage: node build-standalone.js
+ * Usage:
+ *   node build-standalone.js           → standalone.html (사이드바 SPA)
+ *   node build-standalone.js --figma   → figma-export.html (모든 섹션 수직 나열, 피그마 임포트용)
  */
 
 const fs = require('fs');
@@ -212,8 +214,65 @@ ${buildSections()}
 </html>
 `;
 
-const outPath = path.join(ROOT, 'standalone.html');
-fs.writeFileSync(outPath, html, 'utf8');
+const isFigma = process.argv.includes('--figma');
 
-const sizeKB = Math.round(fs.statSync(outPath).size / 1024);
-console.log(`✓ standalone.html 생성 완료 (${sizeKB} KB)`);
+if (isFigma) {
+  // ── 피그마 임포트용: 모든 섹션을 수직으로 나열 ──
+  const sections = NAV.filter(n => n.section);
+  const flatSections = sections.map(item => {
+    const content = readSection(item.section);
+    // <script> 태그 제거 (피그마는 JS 실행 불필요)
+    const noScript = content.replace(/<script[\s\S]*?<\/script>/gi, '');
+    return `
+  <!-- ======== ${item.label} ======== -->
+  <div style="border-top:2px solid #e5e5e5; padding:48px 32px 0;">
+    <div style="font-size:10px;font-weight:700;color:#999;letter-spacing:.1em;text-transform:uppercase;margin-bottom:32px;">
+      ${item.label}
+    </div>
+${noScript}
+  </div>`;
+  }).join('\n');
+
+  const figmaHtml = `<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>넥스트파트너 Design System — Figma Export</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <style>
+${css}
+  </style>
+</head>
+<body class="font-base bg-neutral-50" style="padding:0;margin:0;">
+
+  <!-- 커버 -->
+  <div style="padding:64px 32px 48px;border-bottom:2px solid #e5e5e5;background:#fff;">
+    <div style="font-size:11px;font-weight:700;color:#ff7f65;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px;">넥스트파트너</div>
+    <div style="font-size:28px;font-weight:700;color:#1a1a1a;margin-bottom:6px;">Design System v1.0</div>
+    <div style="font-size:14px;color:#999;">시니어 구직 플랫폼 디자인 시스템 — Tailwind CSS v3 기반</div>
+  </div>
+
+${flatSections}
+
+  <div style="height:80px;"></div>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>
+`;
+
+  const figmaPath = path.join(ROOT, 'figma-export.html');
+  fs.writeFileSync(figmaPath, figmaHtml, 'utf8');
+  const sizeKB = Math.round(fs.statSync(figmaPath).size / 1024);
+  console.log(`✓ figma-export.html 생성 완료 (${sizeKB} KB)`);
+
+} else {
+  // ── 기본: 사이드바 SPA ──
+  const outPath = path.join(ROOT, 'standalone.html');
+  fs.writeFileSync(outPath, html, 'utf8');
+  const sizeKB = Math.round(fs.statSync(outPath).size / 1024);
+  console.log(`✓ standalone.html 생성 완료 (${sizeKB} KB)`);
+}
