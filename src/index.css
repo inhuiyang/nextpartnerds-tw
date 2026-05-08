@@ -597,7 +597,14 @@
   /* ── Job Card ── */
   .np-job-card {
     @apply bg-neutral-0 rounded-card border border-neutral-200
-           p-5 flex flex-col;
+           p-5 flex flex-col
+           cursor-pointer transition-all duration-150 ease-out;
+  }
+  .np-job-card:hover {
+    @apply border-neutral-400 shadow-[0_4px_16px_rgba(0,0,0,0.08)] -translate-y-0.5;
+  }
+  .np-job-card:active {
+    @apply border-neutral-400 shadow-none translate-y-0 bg-neutral-50;
   }
   .np-job-card-recommended {
     border: 2px solid transparent;
