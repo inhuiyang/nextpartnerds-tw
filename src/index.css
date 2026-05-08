@@ -657,9 +657,7 @@
   .np-job-card-reason::before {
     content: '• ';
   }
-  .np-job-card-project {
-    @apply border-l-4 border-l-warm-grey-300;
-  }
+
   .np-job-card-type {
     @apply inline-flex items-center px-2 py-0.5 rounded-badge
            text-sm font-bold text-neutral-600 bg-warm-grey-100;
