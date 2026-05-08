@@ -601,10 +601,10 @@
            cursor-pointer transition-all duration-150 ease-out;
   }
   .np-job-card:hover {
-    @apply border-neutral-400 shadow-[0_4px_16px_rgba(0,0,0,0.08)] -translate-y-0.5;
+    @apply border-primary-500 shadow-[0_4px_16px_rgba(0,0,0,0.08)] -translate-y-0.5;
   }
   .np-job-card:active {
-    @apply border-neutral-400 shadow-none translate-y-0 bg-neutral-50;
+    @apply border-primary-500 shadow-none translate-y-0 bg-neutral-50;
   }
   .np-job-card-recommended {
     border: 2px solid transparent;
