@@ -2083,18 +2083,19 @@ function stepperChange(btn, delta) {
     <div class="border border-neutral-200 rounded-card overflow-hidden">
       <header class="np-header">
         <div class="np-header-inner">
-          <a href="#" class="flex items-center gap-2 shrink-0">
-            <img src="img/symbol.png" width="32" height="32" alt="NextPartner" />
-            <span class="text-xl font-bold text-neutral-900 tracking-tight">NextPartner</span>
-          </a>
-          <nav class="np-header-nav">
+          <div class="flex items-center gap-2 shrink-0">
+            <a href="#" class="flex items-center gap-2">
+              <img src="img/symbol.png" width="32" height="32" alt="NextPartner" />
+              <span class="text-xl font-bold text-neutral-900 tracking-tight">NextPartner</span>
+            </a>
             <span class="np-badge np-badge-warning">구직자</span>
+          </div>
+          <nav class="np-header-nav">
             <button class="np-btn np-btn-primary np-btn-sm">이력서·자기소개서</button>
             <button class="np-btn np-btn-primary np-btn-sm">인재풀 등록</button>
             <a class="np-nav-link">일자리</a>
             <a class="np-nav-link">프로젝트</a>
             <a class="np-nav-link">박람회</a>
-
           </nav>
           <div class="np-header-actions">
             <button class="np-btn np-btn-ghost np-btn-sm">로그인</button>
@@ -2111,18 +2112,19 @@ function stepperChange(btn, delta) {
     <div class="border border-neutral-200 rounded-card overflow-hidden">
       <header class="np-header">
         <div class="np-header-inner">
-          <a href="#" class="flex items-center gap-2 shrink-0">
-            <img src="img/symbol.png" width="32" height="32" alt="NextPartner" />
-            <span class="text-xl font-bold text-neutral-900 tracking-tight">NextPartner</span>
-          </a>
-          <nav class="np-header-nav">
+          <div class="flex items-center gap-2 shrink-0">
+            <a href="#" class="flex items-center gap-2">
+              <img src="img/symbol.png" width="32" height="32" alt="NextPartner" />
+              <span class="text-xl font-bold text-neutral-900 tracking-tight">NextPartner</span>
+            </a>
             <span class="np-badge np-badge-warning">구직자</span>
+          </div>
+          <nav class="np-header-nav">
             <button class="np-btn np-btn-primary np-btn-sm">이력서·자기소개서</button>
             <button class="np-btn np-btn-primary np-btn-sm">인재풀 등록</button>
             <a class="np-nav-link active">일자리</a>
             <a class="np-nav-link">프로젝트</a>
             <a class="np-nav-link">박람회</a>
-
           </nav>
           <div class="np-header-actions">
             <button class="np-btn np-btn-ghost np-btn-sm">로그인</button>
@@ -2139,18 +2141,19 @@ function stepperChange(btn, delta) {
     <div class="border border-neutral-200 rounded-card overflow-hidden">
       <header class="np-header">
         <div class="np-header-inner">
-          <a href="#" class="flex items-center gap-2 shrink-0">
-            <img src="img/symbol.png" width="32" height="32" alt="NextPartner" />
-            <span class="text-xl font-bold text-neutral-900 tracking-tight">NextPartner</span>
-          </a>
-          <nav class="np-header-nav">
+          <div class="flex items-center gap-2 shrink-0">
+            <a href="#" class="flex items-center gap-2">
+              <img src="img/symbol.png" width="32" height="32" alt="NextPartner" />
+              <span class="text-xl font-bold text-neutral-900 tracking-tight">NextPartner</span>
+            </a>
             <span class="np-badge np-badge-warning">구직자</span>
+          </div>
+          <nav class="np-header-nav">
             <button class="np-btn np-btn-primary np-btn-sm">이력서·자기소개서</button>
             <button class="np-btn np-btn-primary np-btn-sm">인재풀 등록</button>
             <a class="np-nav-link">일자리</a>
             <a class="np-nav-link">프로젝트</a>
             <a class="np-nav-link">박람회</a>
-
           </nav>
           <div class="np-header-actions">
             <div class="flex items-center gap-2">
@@ -3469,104 +3472,103 @@ function stepperChange(btn, delta) {
       <button class="np-chip" data-filter="default">Default</button>
       <button class="np-chip" data-filter="public">Public</button>
       <button class="np-chip" data-filter="project">Project</button>
+      <button class="np-chip" data-filter="fair">박람회</button>
     </div>
 
     <!-- Card grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-start" id="card-grid">
+    <div class="flex flex-col gap-3" id="card-grid">
 
       <!-- ── Recommended ── -->
       <div data-card="recommended">
         <p class="text-sm text-neutral-400 mb-2">추천</p>
-        <div class="np-job-card np-job-card-recommended">
-          <!-- 적합도 배지 -->
-          <span class="np-job-card-badge self-start mb-3">적합도 89%</span>
-          <!-- 기업명 + 마감 -->
-          <div class="flex items-center gap-2 mb-2">
-            <span class="np-job-card-company">기업명</span>
-            <span class="np-job-card-urgency">마감 D-3</span>
+        <div class="np-job-card np-job-card-recommended np-job-card-list">
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center justify-between gap-4 mb-2">
+              <div class="flex items-center gap-2">
+                <span class="np-job-card-badge">적합도 89%</span>
+                <span class="np-job-card-company">기업명</span>
+              </div>
+              <span class="np-job-card-urgency shrink-0">마감 D-3</span>
+            </div>
+            <h3 class="np-job-card-title mb-2">영등포구 영동초 교실 미화1명 구인</h3>
+            <span class="np-job-card-type mb-2 inline-flex">미화원</span>
+            <p class="np-job-card-meta mb-1">서울 외 4 | 파트타임 | 주 5일 | 연봉 3000만원 ~ 3500만원</p>
           </div>
-          <!-- 제목 -->
-          <h3 class="np-job-card-title mb-3">영등포구 영동초 교실 미화1명 구인</h3>
-          <!-- 메타 -->
-          <p class="np-job-card-meta mb-1">서울 외 4 | 파트타임 | 주 5일</p>
-          <!-- 급여 -->
-          <p class="np-job-card-pay mb-3">연봉 3000만원 ~ 3500만원</p>
-          <!-- 추천 이유 박스 -->
-          <div class="np-job-card-reasons-box mb-4">
-            <ul class="np-job-card-reasons">
-              <li class="np-job-card-reason">관련 자격증 보유</li>
-              <li class="np-job-card-reason">주 4일 근무 선호도와 일치</li>
-              <li class="np-job-card-reason">추천 이유 최대 3개</li>
-            </ul>
-          </div>
-          <!-- CTA -->
-          <button class="np-btn np-btn-grey-stroke np-btn-sm w-full mt-auto">자세히 보기</button>
         </div>
       </div>
 
       <!-- ── Default ── -->
       <div data-card="default">
         <p class="text-sm text-neutral-400 mb-2">일반</p>
-        <div class="np-job-card">
-          <!-- 기업명 + 마감 -->
-          <div class="flex items-center gap-2 mb-2">
-            <span class="np-job-card-company">기업명</span>
-            <span class="np-job-card-urgency">마감 26-00-00</span>
+        <div class="np-job-card np-job-card-list">
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center justify-between gap-4 mb-2">
+              <span class="np-job-card-company">기업명</span>
+              <span class="np-job-card-urgency shrink-0">마감 26-00-00</span>
+            </div>
+            <h3 class="np-job-card-title mb-2">[반월동]3등급 할아버지 케어하실 요양보호사 모집</h3>
+            <span class="np-job-card-type mb-2 inline-flex">요양보호사</span>
+            <p class="np-job-card-meta mb-1">서울 외 4 | 파트타임 | 주 5일 | 연봉 3000만원 ~ 3500만원</p>
           </div>
-          <!-- 제목 -->
-          <h3 class="np-job-card-title mb-3">[반월동]3등급 할아버지 케어하실 요양보호사 모집</h3>
-          <!-- 메타 -->
-          <p class="np-job-card-meta mb-1">서울 외 4 | 파트타임 | 주 5일</p>
-          <!-- 급여 -->
-          <p class="np-job-card-pay mb-4">연봉 3000만원 ~ 3500만원</p>
-          <!-- CTA -->
-          <button class="np-btn np-btn-grey-stroke np-btn-sm w-full mt-auto">자세히 보기</button>
         </div>
       </div>
 
       <!-- ── Public ── -->
       <div data-card="public">
         <p class="text-sm text-neutral-400 mb-2">공공</p>
-        <div class="np-job-card">
-          <!-- 기업명 + 마감 -->
-          <div class="flex items-center gap-2 mb-2">
-            <span class="np-job-card-company">기업명</span>
-            <span class="np-job-card-urgency">마감 26-00-00</span>
+        <div class="np-job-card np-job-card-list">
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center justify-between gap-4 mb-2">
+              <span class="np-job-card-company">기업명</span>
+              <span class="np-job-card-urgency shrink-0">마감 26-00-00</span>
+            </div>
+            <h3 class="np-job-card-title mb-2">[반월동]3등급 할아버지 케어하실 요양보호사 모집</h3>
+            <span class="np-job-card-type mb-2 inline-flex">요양보호사</span>
+            <p class="np-job-card-meta mb-1">경기도 화성시 병점구 | 연봉 3000만원 ~ 3500만원</p>
+            <p class="np-job-card-register">등록 26-00-00</p>
           </div>
-          <!-- 제목 -->
-          <h3 class="np-job-card-title mb-3">[반월동]3등급 할아버지 케어하실 요양보호사 모집</h3>
-          <!-- 위치 -->
-          <p class="np-job-card-meta mb-1">경기도 화성시 병점구</p>
-          <!-- 급여 -->
-          <p class="np-job-card-pay mb-2">연봉 3000만원 ~ 3500만원</p>
-          <!-- 등록일 -->
-          <p class="np-job-card-register mb-4">등록 26-00-00</p>
-          <!-- CTA -->
-          <button class="np-btn np-btn-grey-stroke np-btn-sm w-full mt-auto">자세히 보기</button>
         </div>
       </div>
 
       <!-- ── Project ── -->
-      <div data-card="project">
+      <div data-card="project" class="self-start">
         <p class="text-sm text-neutral-400 mb-2">프로젝트</p>
-        <div class="np-job-card np-job-card-project">
-          <!-- 프로젝트 타입 뱃지 -->
+        <div class="np-job-card np-job-card-project w-[300px]">
           <span class="np-badge np-badge-info self-start mb-3">프로젝트</span>
-          <!-- 기업명 + 마감 -->
           <div class="flex items-center gap-2 mb-2">
             <span class="np-job-card-company">기업명</span>
             <span class="np-job-card-urgency">마감 D-7</span>
           </div>
-          <!-- 제목 -->
-          <h3 class="np-job-card-title mb-3">시니어 온라인 강사 콘텐츠 제작 프로젝트</h3>
-          <!-- 메타 (장소 + 근무 형태) -->
+          <h3 class="np-job-card-title mb-2">시니어 온라인 강사 콘텐츠 제작 프로젝트</h3>
+          <span class="np-job-card-type mb-3 inline-flex">교육 강사</span>
           <p class="np-job-card-meta mb-1">온라인 | 재택 가능</p>
-          <!-- 기간 -->
           <p class="np-job-card-duration mb-1">기간 3개월</p>
-          <!-- 예산 -->
           <p class="np-job-card-pay mb-4">월 200만원</p>
-          <!-- CTA -->
-          <button class="np-btn np-btn-grey-stroke np-btn-sm w-full mt-auto">자세히 보기</button>
+        </div>
+      </div>
+
+      <!-- ── Fair ── -->
+      <div data-card="fair" class="self-start">
+        <p class="text-sm text-neutral-400 mb-2">박람회</p>
+        <div class="np-job-card w-[300px] overflow-hidden">
+          <div class="-mx-5 -mt-5 mb-4 h-36 bg-warm-grey-100 flex items-center justify-center shrink-0">
+            <i data-lucide="image" class="w-icon-md h-icon-md text-warm-grey-300"></i>
+          </div>
+          <span class="np-badge np-badge-info self-start mb-3">박람회</span>
+          <h3 class="np-job-card-title mb-2">2026 모리아Town박람회</h3>
+          <p class="np-job-card-company mb-3">(주) 모리아타운</p>
+          <div class="flex items-center gap-1.5 mb-1">
+            <i data-lucide="calendar" class="w-4 h-4 text-neutral-400 shrink-0"></i>
+            <span class="np-job-card-meta">2026.04.15 ~ 2026.06.30</span>
+          </div>
+          <div class="flex items-center gap-1.5 mb-4">
+            <i data-lucide="map-pin" class="w-4 h-4 text-neutral-400 shrink-0"></i>
+            <span class="np-job-card-meta">서울시 타운홀</span>
+          </div>
+          <div class="flex flex-col gap-2 mt-auto">
+            <button class="np-btn np-btn-primary np-btn-sm w-full">사전예약하기</button>
+            <button class="np-btn np-btn-grey-stroke np-btn-sm w-full">자세히 보기</button>
+          </div>
         </div>
       </div>
 

@@ -2477,6 +2477,23 @@ details.np-dropdown[open] .np-dropdown-chevron {
   content: '• ';
 }
 
+.np-job-card-type {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 4px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 237 235 / var(--tw-bg-opacity, 1));
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(102 102 102 / var(--tw-text-opacity, 1));
+}
+
 .np-job-card-duration {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -3363,6 +3380,10 @@ details.np-dropdown[open] .np-dropdown-chevron {
 
 .flex {
   display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
 }
 
 .table {
