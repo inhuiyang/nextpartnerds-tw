@@ -3274,6 +3274,11 @@ details.np-dropdown[open] .np-dropdown-chevron {
   z-index: 50;
 }
 
+.-mx-5 {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
 .my-1 {
   margin-top: 4px;
   margin-bottom: 4px;
@@ -3282,6 +3287,10 @@ details.np-dropdown[open] .np-dropdown-chevron {
 .my-10 {
   margin-top: 40px;
   margin-bottom: 40px;
+}
+
+.-mt-5 {
+  margin-top: -20px;
 }
 
 .mb-1 {
@@ -3394,6 +3403,10 @@ details.np-dropdown[open] .np-dropdown-chevron {
 
 .h-3 {
   height: 12px;
+}
+
+.h-36 {
+  height: 9rem;
 }
 
 .h-4 {
@@ -4159,6 +4172,11 @@ details.np-dropdown[open] .np-dropdown-chevron {
 .text-success-500 {
   --tw-text-opacity: 1;
   color: rgb(76 175 80 / var(--tw-text-opacity, 1));
+}
+
+.text-warm-grey-300 {
+  --tw-text-opacity: 1;
+  color: rgb(229 209 201 / var(--tw-text-opacity, 1));
 }
 
 .text-warning-500 {
