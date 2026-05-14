@@ -2493,8 +2493,8 @@ details.np-dropdown[open] .np-dropdown-chevron {
 
 .np-job-card-list .np-job-card-title {
   min-height: 0;
-  -webkit-line-clamp: 1;
-  line-clamp: 1;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
 }
 
 .np-job-card-list .np-job-card-reasons {
