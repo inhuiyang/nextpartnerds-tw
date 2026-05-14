@@ -665,7 +665,17 @@
   .np-job-card-duration {
     @apply text-base text-neutral-600;
   }
-
+  .np-job-card-list {
+    @apply flex flex-row items-start gap-5;
+  }
+  .np-job-card-list .np-job-card-title {
+    min-height: 0;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+  }
+  .np-job-card-list .np-job-card-reasons {
+    @apply flex-row flex-wrap gap-x-4 gap-y-1;
+  }
   /* ── Footer ── */
   .np-footer {
     @apply w-full bg-neutral-0 border-t border-neutral-200 px-4 md:px-8 py-8 md:py-10;
