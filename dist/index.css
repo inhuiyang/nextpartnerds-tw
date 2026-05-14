@@ -2394,8 +2394,8 @@ details.np-dropdown[open] .np-dropdown-chevron {
   padding-right: 12px;
   padding-top: 4px;
   padding-bottom: 4px;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
@@ -2403,16 +2403,16 @@ details.np-dropdown[open] .np-dropdown-chevron {
 }
 
 .np-job-card-urgency {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(255 127 101 / var(--tw-text-opacity, 1));
 }
 
 .np-job-card-title {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(26 26 26 / var(--tw-text-opacity, 1));
@@ -2426,29 +2426,29 @@ details.np-dropdown[open] .np-dropdown-chevron {
 }
 
 .np-job-card-company {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   --tw-text-opacity: 1;
   color: rgb(153 153 153 / var(--tw-text-opacity, 1));
 }
 
 .np-job-card-meta {
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   --tw-text-opacity: 1;
   color: rgb(102 102 102 / var(--tw-text-opacity, 1));
 }
 
 .np-job-card-pay {
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   --tw-text-opacity: 1;
   color: rgb(102 102 102 / var(--tw-text-opacity, 1));
 }
 
 .np-job-card-register {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
   --tw-text-opacity: 1;
   color: rgb(153 153 153 / var(--tw-text-opacity, 1));
 }
@@ -2467,8 +2467,8 @@ details.np-dropdown[open] .np-dropdown-chevron {
 }
 
 .np-job-card-reason {
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   --tw-text-opacity: 1;
   color: rgb(255 127 101 / var(--tw-text-opacity, 1));
 }
@@ -2485,18 +2485,18 @@ details.np-dropdown[open] .np-dropdown-chevron {
   background-color: rgb(245 237 235 / var(--tw-bg-opacity, 1));
   padding-left: 8px;
   padding-right: 8px;
-  padding-top: 0.125rem;
-  padding-bottom: 0.125rem;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   font-weight: 700;
   --tw-text-opacity: 1;
   color: rgb(102 102 102 / var(--tw-text-opacity, 1));
 }
 
 .np-job-card-duration {
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   --tw-text-opacity: 1;
   color: rgb(102 102 102 / var(--tw-text-opacity, 1));
 }
