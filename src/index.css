@@ -479,6 +479,9 @@
   }
   .np-nav-link.active     { @apply text-primary-500 bg-primary-50; }
   .np-nav-link-job.active { @apply text-primary-500 bg-primary-50; }
+  .np-nav-label {
+    @apply px-2 text-xs font-bold text-neutral-400 tracking-widest whitespace-nowrap;
+  }
   .np-header-divider {
     @apply w-px h-4 bg-neutral-200 mx-1;
   }
