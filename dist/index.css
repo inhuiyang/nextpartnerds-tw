@@ -1925,7 +1925,7 @@ details.np-dropdown[open] .np-dropdown-chevron {
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  height: 3.5rem;
+  height: 64px;
   max-width: 1212px;
   align-items: center;
   gap: 16px;
@@ -1935,7 +1935,7 @@ details.np-dropdown[open] .np-dropdown-chevron {
 
 @media (min-width: 768px) {
   .np-header-inner {
-    height: 64px;
+    height: 5rem;
     gap: 32px;
     padding-left: 24px;
     padding-right: 24px;
@@ -1975,7 +1975,7 @@ details.np-dropdown[open] .np-dropdown-chevron {
   padding-right: 12px;
   padding-top: 8px;
   padding-bottom: 8px;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 500;
   --tw-text-opacity: 1;
@@ -2000,7 +2000,7 @@ details.np-dropdown[open] .np-dropdown-chevron {
   padding-right: 12px;
   padding-top: 8px;
   padding-bottom: 8px;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1.75rem;
   font-weight: 700;
   --tw-text-opacity: 1;

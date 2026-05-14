@@ -454,7 +454,7 @@
   }
   .np-header-inner {
     @apply max-w-content mx-auto px-4 md:px-6
-           flex items-center h-14 md:h-16 gap-4 md:gap-8;
+           flex items-center h-16 md:h-20 gap-4 md:gap-8;
   }
   .np-header-nav {
     @apply hidden md:flex items-center gap-1 ml-auto;
@@ -468,12 +468,12 @@
            hover:bg-neutral-50 transition-colors duration-[120ms] ease-out;
   }
   .np-nav-link {
-    @apply px-3 py-2 text-lg text-neutral-500 font-medium rounded-button cursor-pointer
+    @apply px-3 py-2 text-xl text-neutral-500 font-medium rounded-button cursor-pointer
            hover:text-neutral-900 hover:bg-neutral-50
            transition-colors duration-[120ms] ease-out;
   }
   .np-nav-link-job {
-    @apply px-3 py-2 text-lg font-bold text-neutral-900 rounded-button cursor-pointer
+    @apply px-3 py-2 text-xl font-bold text-neutral-900 rounded-button cursor-pointer
            hover:text-primary-500 hover:bg-primary-50
            transition-colors duration-[120ms] ease-out;
   }
