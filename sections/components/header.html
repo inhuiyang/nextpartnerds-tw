@@ -85,6 +85,9 @@
             <a class="np-nav-link">박람회</a>
           </nav>
           <div class="np-header-actions">
+            <button class="flex items-center justify-center w-10 h-10 text-neutral-400 rounded-button hover:bg-neutral-50 hover:text-neutral-800 transition-colors" aria-label="알림">
+              <i data-lucide="bell" class="w-5 h-5"></i>
+            </button>
             <div class="flex items-center gap-2">
               <span class="text-base text-neutral-600">홍길동님</span>
             </div>
@@ -131,7 +134,156 @@
             <div class="w-8 h-8 rounded-full bg-primary-100 overflow-hidden shrink-0">
               <img src="https://i.pravatar.cc/32?img=12" alt="프로필" class="w-full h-full object-cover" />
             </div>
+            <button class="flex items-center justify-center w-10 h-10 text-neutral-400 rounded-button hover:bg-neutral-50 hover:text-neutral-800 transition-colors" aria-label="알림">
+              <i data-lucide="bell" class="w-5 h-5"></i>
+            </button>
             <span class="text-sm text-neutral-600">홍길동님</span>
+            <button class="flex items-center justify-center w-10 h-10 text-neutral-400 rounded-button hover:bg-neutral-50 hover:text-neutral-800 transition-colors" aria-label="로그아웃">
+              <i data-lucide="log-out" class="w-5 h-5"></i>
+            </button>
+          </div>
+        </div>
+      </header>
+    </div>
+  </section>
+
+  <!-- ── 구인 Header ── -->
+  <div class="border-t border-neutral-200 my-10"></div>
+  <h2 class="text-xl font-bold text-neutral-900 mb-1">Header — 구인</h2>
+  <p class="text-neutral-600 mb-6">기업 회원용 헤더 · 채용공고·프로젝트 등록 버튼 + 관리 메뉴</p>
+
+  <!-- 구인 Desktop Default -->
+  <section class="mb-6">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-3">Desktop — Default</h2>
+    <div class="border border-neutral-200 rounded-card overflow-hidden">
+      <header class="np-header">
+        <div class="np-header-inner">
+          <div class="flex items-center gap-2 shrink-0">
+            <a href="#" class="flex items-center gap-2">
+              <img src="img/symbol.png" width="32" height="32" alt="NextPartner" />
+              <span class="text-2xl font-bold text-neutral-900 tracking-tight">NextPartner</span>
+            </a>
+            <span class="np-badge np-badge-info">구인</span>
+          </div>
+          <nav class="np-header-nav">
+            <button class="np-btn np-btn-primary np-btn-md">채용공고 등록</button>
+            <button class="np-btn np-btn-primary np-btn-md">프로젝트 등록</button>
+            <a class="np-nav-link">채용 관리</a>
+            <a class="np-nav-link">인재풀</a>
+            <a class="np-nav-link">프로젝트</a>
+          </nav>
+          <div class="np-header-actions">
+            <button class="np-btn np-btn-ghost np-btn-md">로그인</button>
+            <button class="np-btn np-btn-primary np-btn-md">회원가입</button>
+          </div>
+        </div>
+      </header>
+    </div>
+  </section>
+
+  <!-- 구인 Desktop Active State -->
+  <section class="mb-6">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-3">Desktop — Active State (채용 관리 선택)</h2>
+    <div class="border border-neutral-200 rounded-card overflow-hidden">
+      <header class="np-header">
+        <div class="np-header-inner">
+          <div class="flex items-center gap-2 shrink-0">
+            <a href="#" class="flex items-center gap-2">
+              <img src="img/symbol.png" width="32" height="32" alt="NextPartner" />
+              <span class="text-2xl font-bold text-neutral-900 tracking-tight">NextPartner</span>
+            </a>
+            <span class="np-badge np-badge-info">구인</span>
+          </div>
+          <nav class="np-header-nav">
+            <button class="np-btn np-btn-primary np-btn-md">채용공고 등록</button>
+            <button class="np-btn np-btn-primary np-btn-md">프로젝트 등록</button>
+            <a class="np-nav-link active">채용 관리</a>
+            <a class="np-nav-link">인재풀</a>
+            <a class="np-nav-link">프로젝트</a>
+          </nav>
+          <div class="np-header-actions">
+            <button class="np-btn np-btn-ghost np-btn-md">로그인</button>
+            <button class="np-btn np-btn-primary np-btn-md">회원가입</button>
+          </div>
+        </div>
+      </header>
+    </div>
+  </section>
+
+  <!-- 구인 Desktop Logged In -->
+  <section class="mb-6">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-3">Desktop — Logged In</h2>
+    <div class="border border-neutral-200 rounded-card overflow-hidden">
+      <header class="np-header">
+        <div class="np-header-inner">
+          <div class="flex items-center gap-2 shrink-0">
+            <a href="#" class="flex items-center gap-2">
+              <img src="img/symbol.png" width="32" height="32" alt="NextPartner" />
+              <span class="text-2xl font-bold text-neutral-900 tracking-tight">NextPartner</span>
+            </a>
+            <span class="np-badge np-badge-info">구인</span>
+          </div>
+          <nav class="np-header-nav">
+            <button class="np-btn np-btn-primary np-btn-md">채용공고 등록</button>
+            <button class="np-btn np-btn-primary np-btn-md">프로젝트 등록</button>
+            <a class="np-nav-link">채용 관리</a>
+            <a class="np-nav-link">인재풀</a>
+            <a class="np-nav-link">프로젝트</a>
+          </nav>
+          <div class="np-header-actions">
+            <button class="flex items-center justify-center w-10 h-10 text-neutral-400 rounded-button hover:bg-neutral-50 hover:text-neutral-800 transition-colors" aria-label="알림">
+              <i data-lucide="bell" class="w-5 h-5"></i>
+            </button>
+            <div class="flex items-center gap-2">
+              <span class="text-base text-neutral-600">(주)모리아타운님</span>
+            </div>
+            <button class="flex items-center justify-center w-10 h-10 text-neutral-400 rounded-button hover:bg-neutral-50 hover:text-neutral-800 transition-colors" aria-label="로그아웃">
+              <i data-lucide="log-out" class="w-5 h-5"></i>
+            </button>
+          </div>
+        </div>
+      </header>
+    </div>
+  </section>
+
+  <!-- 구인 Mobile Default -->
+  <section class="mb-6">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-3">Mobile — 로고 + 햄버거</h2>
+    <div class="border border-neutral-200 rounded-card overflow-hidden" style="max-width:375px">
+      <header class="np-header">
+        <div class="px-4 flex items-center h-14 gap-3">
+          <a href="#" class="flex items-center gap-2 shrink-0">
+            <img src="img/symbol.png" width="28" height="28" alt="NextPartner" />
+            <span class="text-lg font-bold text-neutral-900 tracking-tight">NextPartner</span>
+          </a>
+          <span class="np-badge np-badge-info">구인</span>
+          <button class="ml-auto flex items-center justify-center w-10 h-10 text-neutral-800 rounded-button hover:bg-neutral-50">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </header>
+    </div>
+  </section>
+
+  <!-- 구인 Mobile Logged In -->
+  <section class="mb-10">
+    <h2 class="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-3">Mobile — Logged In</h2>
+    <div class="border border-neutral-200 rounded-card overflow-hidden" style="max-width:375px">
+      <header class="np-header">
+        <div class="px-4 flex items-center h-14 gap-3">
+          <a href="#" class="flex items-center gap-2 shrink-0">
+            <img src="img/symbol.png" width="28" height="28" alt="NextPartner" />
+            <span class="text-lg font-bold text-neutral-900 tracking-tight">NextPartner</span>
+          </a>
+          <span class="np-badge np-badge-info">구인</span>
+          <div class="ml-auto flex items-center gap-2">
+            <div class="w-8 h-8 rounded-full bg-info-100 overflow-hidden shrink-0 flex items-center justify-center">
+              <i data-lucide="building-2" class="w-4 h-4 text-info-500"></i>
+            </div>
+            <button class="flex items-center justify-center w-10 h-10 text-neutral-400 rounded-button hover:bg-neutral-50 hover:text-neutral-800 transition-colors" aria-label="알림">
+              <i data-lucide="bell" class="w-5 h-5"></i>
+            </button>
+            <span class="text-sm text-neutral-600">(주)모리아타운님</span>
             <button class="flex items-center justify-center w-10 h-10 text-neutral-400 rounded-button hover:bg-neutral-50 hover:text-neutral-800 transition-colors" aria-label="로그아웃">
               <i data-lucide="log-out" class="w-5 h-5"></i>
             </button>
